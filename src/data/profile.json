@@ -1,0 +1,17 @@
+{
+  "name": "ALEX CHEN",
+  "initials": "AC",
+  "title": "Software Developer",
+  "bio": "I don't just write code. I engineer solutions that matter.",
+  "subtitles": ["Software Developer", "Problem Solver", "Builder"],
+  "avatar": "",
+  "available": true,
+  "social": {
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com",
+    "twitter": "https://twitter.com",
+    "email": "hello@alexchen.dev"
+  },
+  "aboutBio": "With over 5 years of experience in software development, I've built everything from real-time data pipelines to consumer-facing mobile apps. My journey started with a curiosity for how things work under the hood — and it hasn't stopped since. I believe great software is invisible: it just works, delights users, and solves real problems without getting in the way.",
+  "traits": ["Problem Solver", "Fast Learner", "Team Player", "Open Source Contributor", "Detail Oriented"]
+}

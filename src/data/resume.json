@@ -1,0 +1,77 @@
+{
+  "experience": [
+    {
+      "company": "TechNova Inc.",
+      "role": "Senior Software Developer",
+      "period": "2022 – Present",
+      "season": "S3",
+      "bullets": [
+        "Led a team of 5 engineers to rebuild the core platform, improving performance by 60%",
+        "Designed and implemented microservices architecture serving 1M+ requests/day",
+        "Mentored junior developers and established code review best practices"
+      ]
+    },
+    {
+      "company": "DataStream Labs",
+      "role": "Full Stack Developer",
+      "period": "2020 – 2022",
+      "season": "S2",
+      "bullets": [
+        "Built real-time data visualization dashboards used by 200+ enterprise clients",
+        "Reduced API response times by 45% through query optimization and caching",
+        "Implemented CI/CD pipelines reducing deployment time from hours to minutes"
+      ]
+    },
+    {
+      "company": "StartupXYZ",
+      "role": "Junior Developer",
+      "period": "2019 – 2020",
+      "season": "S1",
+      "bullets": [
+        "Developed the company's first mobile app reaching 10K downloads in 3 months",
+        "Integrated third-party payment and authentication systems",
+        "Contributed to open-source libraries used by the development community"
+      ]
+    }
+  ],
+  "skills": {
+    "Frontend": [
+      { "name": "React", "level": 95 },
+      { "name": "TypeScript", "level": 90 },
+      { "name": "Tailwind CSS", "level": 88 },
+      { "name": "Next.js", "level": 82 }
+    ],
+    "Backend": [
+      { "name": "Node.js", "level": 92 },
+      { "name": "Python", "level": 85 },
+      { "name": "PostgreSQL", "level": 80 },
+      { "name": "GraphQL", "level": 75 }
+    ],
+    "DevOps": [
+      { "name": "Docker", "level": 85 },
+      { "name": "AWS", "level": 78 },
+      { "name": "CI/CD", "level": 88 },
+      { "name": "Kubernetes", "level": 70 }
+    ],
+    "Tools": [
+      { "name": "Git", "level": 95 },
+      { "name": "VS Code", "level": 90 },
+      { "name": "Figma", "level": 72 },
+      { "name": "Jira", "level": 80 }
+    ]
+  },
+  "education": [
+    {
+      "institution": "University of Technology",
+      "degree": "B.Sc. Computer Science",
+      "period": "2015 – 2019",
+      "gpa": "3.8/4.0"
+    }
+  ],
+  "achievements": [
+    { "number": 12, "label": "Projects Completed" },
+    { "number": 3, "label": "Hackathons Won" },
+    { "number": 500, "suffix": "+", "label": "GitHub Stars" },
+    { "number": 15, "suffix": "K+", "label": "Lines of Code" }
+  ]
+}
