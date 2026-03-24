@@ -1,0 +1,8 @@
+[
+  { "name": "AWS Solutions Architect", "issuer": "Amazon Web Services", "issueDate": "2023-06", "credentialId": "AWS-SA-2023-XXXXX", "verifyUrl": "https://aws.amazon.com/verification", "skills": ["Cloud Architecture", "EC2", "S3", "Lambda"] },
+  { "name": "Google Cloud Professional", "issuer": "Google Cloud", "issueDate": "2023-03", "credentialId": "GCP-PRO-2023-XXXXX", "verifyUrl": "https://cloud.google.com/certification", "skills": ["GCP", "BigQuery", "Cloud Functions"] },
+  { "name": "Meta Front-End Developer", "issuer": "Meta", "issueDate": "2022-11", "credentialId": "META-FE-2022-XXXXX", "verifyUrl": "https://coursera.org/verify", "skills": ["React", "JavaScript", "UI/UX"] },
+  { "name": "Microsoft Azure Fundamentals", "issuer": "Microsoft", "issueDate": "2022-08", "credentialId": "AZ-900-2022-XXXXX", "verifyUrl": "https://learn.microsoft.com/certifications", "skills": ["Azure", "Cloud Computing", "DevOps"] },
+  { "name": "Responsive Web Design", "issuer": "freeCodeCamp", "issueDate": "2021-05", "credentialId": "FCC-RWD-2021-XXXXX", "verifyUrl": "https://freecodecamp.org/certification", "skills": ["HTML", "CSS", "Responsive Design"] },
+  { "name": "CCNA Routing & Switching", "issuer": "Cisco", "issueDate": "2021-01", "credentialId": "CISCO-CCNA-2021-XXXXX", "verifyUrl": "https://cisco.com/verify", "skills": ["Networking", "TCP/IP", "Security"] }
+]

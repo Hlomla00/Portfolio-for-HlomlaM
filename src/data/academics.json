@@ -1,0 +1,30 @@
+[
+  {
+    "year": "2015",
+    "institution": "Westfield High School",
+    "qualification": "High School Diploma — Honors",
+    "description": "Graduated top 5% of class with focus on Mathematics and Computer Science.",
+    "storyText": "This is where it all began. A dusty computer lab, a curious mind, and a \"Hello World\" that changed everything. I discovered that code was more than syntax — it was power to create."
+  },
+  {
+    "year": "2017",
+    "institution": "City Community College",
+    "qualification": "Associate Degree in IT",
+    "description": "Focused on systems administration, networking, and introductory programming.",
+    "storyText": "Two years of fundamentals. Learning how networks breathe, how servers think, and how databases remember. Every concept was a building block for what came next."
+  },
+  {
+    "year": "2019",
+    "institution": "University of Technology",
+    "qualification": "B.Sc. Computer Science",
+    "description": "Specialized in software engineering and artificial intelligence. GPA: 3.8/4.0.",
+    "storyText": "The university years were a forge. Algorithms became second nature. I built my first real product, won my first hackathon, and learned that the best code solves human problems."
+  },
+  {
+    "year": "2024",
+    "institution": "Online & Self-Directed",
+    "qualification": "Continuous Learning",
+    "description": "AWS certifications, advanced ML courses, open-source contributions, and conference talks.",
+    "storyText": "Education never stops. Every new framework, every open-source contribution, every late-night debugging session is a lesson. The classroom is everywhere."
+  }
+]

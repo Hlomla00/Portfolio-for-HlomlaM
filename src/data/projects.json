@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "title": "CloudSync Dashboard",
+    "category": "Web",
+    "description": "A real-time cloud infrastructure monitoring dashboard that reduced incident response time by 40%. Built for a team of 50+ DevOps engineers managing multi-cloud deployments.",
+    "techStack": ["React", "TypeScript", "D3.js", "WebSocket", "AWS"],
+    "liveUrl": "https://example.com",
+    "githubUrl": "https://github.com",
+    "images": [],
+    "metrics": ["40% faster response", "50+ daily users", "99.9% uptime"],
+    "featured": true
+  },
+  {
+    "id": "2",
+    "title": "MediTrack",
+    "category": "Mobile",
+    "description": "A medication tracking app helping elderly patients stay on schedule. Integrated with pharmacy APIs for automatic refill reminders and caregiver notifications.",
+    "techStack": ["React Native", "Node.js", "MongoDB", "Push Notifications"],
+    "liveUrl": "https://example.com",
+    "githubUrl": "https://github.com",
+    "images": [],
+    "metrics": ["10K+ downloads", "4.8★ rating", "92% adherence rate"],
+    "featured": true
+  },
+  {
+    "id": "3",
+    "title": "SentimentScope",
+    "category": "AI/ML",
+    "description": "An NLP-powered social media sentiment analyzer processing 100K+ tweets daily. Provides real-time brand perception dashboards for marketing teams.",
+    "techStack": ["Python", "TensorFlow", "FastAPI", "Redis", "Docker"],
+    "liveUrl": "",
+    "githubUrl": "https://github.com",
+    "images": [],
+    "metrics": ["100K tweets/day", "94% accuracy", "60% faster insights"],
+    "featured": false
+  },
+  {
+    "id": "4",
+    "title": "DevFlow CLI",
+    "category": "Open Source",
+    "description": "A developer productivity CLI tool that automates repetitive git workflows, PR templates, and deployment scripts. 500+ GitHub stars.",
+    "techStack": ["Go", "Cobra", "GitHub API", "Shell"],
+    "liveUrl": "",
+    "githubUrl": "https://github.com",
+    "images": [],
+    "metrics": ["500+ ★ stars", "2K+ installs", "30+ contributors"],
+    "featured": false
+  },
+  {
+    "id": "5",
+    "title": "EcoRoute",
+    "category": "Web",
+    "description": "A carbon-footprint-aware route planner for logistics companies. Optimizes delivery routes to minimize emissions while maintaining delivery SLAs.",
+    "techStack": ["Next.js", "Python", "Google Maps API", "PostgreSQL"],
+    "liveUrl": "https://example.com",
+    "githubUrl": "https://github.com",
+    "images": [],
+    "metrics": ["15% emission reduction", "200+ routes/day", "3 enterprise clients"],
+    "featured": true
+  },
+  {
+    "id": "6",
+    "title": "PixelForge",
+    "category": "AI/ML",
+    "description": "An AI image generation tool with style transfer capabilities. Users can blend artistic styles with their photos for unique digital art.",
+    "techStack": ["Python", "PyTorch", "Stable Diffusion", "Flask", "React"],
+    "liveUrl": "https://example.com",
+    "githubUrl": "https://github.com",
+    "images": [],
+    "metrics": ["50K+ images generated", "5s avg generation", "20+ styles"],
+    "featured": false
+  }
+]
