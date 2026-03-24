@@ -94,11 +94,11 @@ const ScrollRow = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="relative group">
-      <button onClick={() => scroll(-1)} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-background/80 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"><ChevronLeft size={20} /></button>
+      <button onClick={(e) => { e.stopPropagation(); scroll(-1); }} className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 p-2 bg-background/90 border border-border rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-secondary"><ChevronLeft size={20} /></button>
       <div ref={scrollRef} className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 snap-x" style={{ scrollbarWidth: "none" }}>
         {children}
       </div>
-      <button onClick={() => scroll(1)} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-background/80 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"><ChevronRight size={20} /></button>
+      <button onClick={(e) => { e.stopPropagation(); scroll(1); }} className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 p-2 bg-background/90 border border-border rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-secondary"><ChevronRight size={20} /></button>
     </div>
   );
 };
