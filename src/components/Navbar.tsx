@@ -43,7 +43,7 @@ const Navbar = () => {
       style={{ backdropFilter: "blur(12px)", backgroundColor: "hsl(var(--background) / 0.85)" }}
     >
       <div className="font-display text-2xl text-accent tracking-wider cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-        AC
+        Hlomla Magopeni
       </div>
       <div className="hidden md:flex gap-6">
         {navLinks.map((l) => (

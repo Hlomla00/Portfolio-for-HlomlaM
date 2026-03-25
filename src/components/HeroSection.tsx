@@ -22,8 +22,8 @@ const HeroSection = () => {
 
         {/* Name */}
         <h1
-          className={`font-display leading-none tracking-wide text-foreground transition-all duration-700 delay-200 ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-          style={{ fontSize: "clamp(5rem, 12vw, 12rem)", textShadow: "0 0 60px hsl(0 0% 100% / 0.08)" }}
+          className={`font-display text-7xl leading-none tracking-wide text-foreground transition-all duration-700 delay-200 ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          style={{ textShadow: "0 0 60px hsl(0 0% 100% / 0.08)" }}
         >
           {profile.name}
         </h1>
@@ -57,7 +57,7 @@ const HeroSection = () => {
             href="#"
             className="px-8 py-3 bg-accent text-accent-foreground font-body text-sm tracking-wider uppercase rounded hover:brightness-110 transition-all duration-300"
           >
-            Download CV
+            DOWNLOAD RESUME
           </a>
         </div>
       </div>
