@@ -1,30 +1,30 @@
 [
   {
-    "year": "2015",
-    "institution": "Westfield High School",
-    "qualification": "High School Diploma — Honors",
-    "description": "Graduated top 5% of class with focus on Mathematics and Computer Science.",
-    "storyText": "This is where it all began. A dusty computer lab, a curious mind, and a \"Hello World\" that changed everything. I discovered that code was more than syntax — it was power to create."
-  },
-  {
     "year": "2017",
-    "institution": "City Community College",
-    "qualification": "Associate Degree in IT",
-    "description": "Focused on systems administration, networking, and introductory programming.",
-    "storyText": "Two years of fundamentals. Learning how networks breathe, how servers think, and how databases remember. Every concept was a building block for what came next."
+    "institution": "Bisho High School",
+    "qualification": "Bachelor's Pass — National Senior Certificate",
+    "description": "Graduated with a Bachelor's Pass, building a strong academic foundation in Mathematics and Sciences that sparked a lifelong passion for technology.",
+    "storyText": "This is where it all began. In the classrooms of Bisho, a curiosity for how things work took root. A Bachelor's Pass wasn't just a certificate — it was a launchpad. The discipline of study, the thrill of problem-solving, and the first glimpse of what technology could do set the trajectory for everything that followed."
   },
   {
-    "year": "2019",
-    "institution": "University of Technology",
-    "qualification": "B.Sc. Computer Science",
-    "description": "Specialized in software engineering and artificial intelligence. GPA: 3.8/4.0.",
-    "storyText": "The university years were a forge. Algorithms became second nature. I built my first real product, won my first hackathon, and learned that the best code solves human problems."
+    "year": "2023",
+    "institution": "Cape Peninsula University of Technology",
+    "qualification": "Higher Certificate in ICT (NQF5)",
+    "description": "Completed a Higher Certificate in Information and Communication Technology, mastering the fundamentals of computing, networking, and introductory programming.",
+    "storyText": "Cape Town opened a new chapter. The Higher Certificate was an immersion into the digital world — learning how systems communicate, how data flows, and how software is born from logic. Every lab session, every late-night study sprint built the technical vocabulary I'd need for what came next."
   },
   {
-    "year": "2024",
-    "institution": "Online & Self-Directed",
-    "qualification": "Continuous Learning",
-    "description": "AWS certifications, advanced ML courses, open-source contributions, and conference talks.",
-    "storyText": "Education never stops. Every new framework, every open-source contribution, every late-night debugging session is a lesson. The classroom is everywhere."
+    "year": "2024–Present",
+    "institution": "Cape Peninsula University of Technology",
+    "qualification": "Diploma in ICT — Application Development",
+    "description": "Currently pursuing a Diploma in Application Development, specializing in full-stack development with Java 21, MySQL, HTML, CSS, and JavaScript. Building real-world projects in agile team environments.",
+    "storyText": "This is the forge. Application Development isn't just about writing code — it's about engineering solutions. From ride-hailing platforms to clinic booking systems, every project is a lesson in collaboration, architecture, and impact. The diploma is the framework, but the real education happens in the trenches of team sprints and production-ready code."
+  },
+  {
+    "year": "Ongoing",
+    "institution": "Self-Directed & Continuous Learning",
+    "qualification": "Continuous Professional Growth",
+    "description": "Actively expanding skills through hands-on projects, open-source exploration, online courses, and community engagement in the developer ecosystem.",
+    "storyText": "Education never stops. Every new framework explored, every Stack Overflow answer that clicks, every agile retrospective that reveals a better way — it's all part of the journey. The classroom is everywhere, and the curriculum is written by curiosity."
   }
 ]
