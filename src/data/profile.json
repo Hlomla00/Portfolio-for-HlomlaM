@@ -1,17 +1,17 @@
 {
   "name": "Hlomla Magopeni",
   "initials": "HM",
-  "title": "Software Developer",
-  "bio": "I don't just write code. I engineer solutions that matter.",
-  "subtitles": ["Software Developer", "Problem Solver", "Builder"],
+  "title": "Full-Stack Developer",
+  "bio": "I don't just write code. I build scalable solutions that solve real-world problems and improve community access to services.",
+  "subtitles": ["Full-Stack Developer", "Problem Solver", "Agile Collaborator"],
   "avatar": "",
   "available": true,
   "social": {
     "github": "https://github.com",
     "linkedin": "https://linkedin.com",
-    "twitter": "https://twitter.com",
-    "email": "hello@alexchen.dev"
+    "twitter": "",
+    "email": "218070349@mycput.ac.za"
   },
-  "aboutBio": "With over 5 years of experience in software development, I've built everything from real-time data pipelines to consumer-facing mobile apps. My journey started with a curiosity for how things work under the hood — and it hasn't stopped since. I believe great software is invisible: it just works, delights users, and solves real problems without getting in the way.",
-  "traits": ["Problem Solver", "Fast Learner", "Team Player", "Open Source Contributor", "Detail Oriented"]
+  "aboutBio": "I'm a motivated Application Development student at the Cape Peninsula University of Technology, passionate about building full-stack applications that make a real difference. From ride-hailing platforms that serve the unconnected to clinic booking systems that streamline healthcare access — I thrive on turning complex problems into clean, maintainable software. I believe technology should bridge gaps, not create them, and every line of code I write is driven by that conviction.",
+  "traits": ["Problem Solver", "Agile Team Player", "Clean Code Advocate", "Community-Driven", "Detail Oriented"]
 }

@@ -1,77 +1,92 @@
 {
   "experience": [
     {
-      "company": "TechNova Inc.",
-      "role": "Senior Software Developer",
-      "period": "2022 – Present",
+      "company": "SafeRide — All-In-One Ride Hailing Platform",
+      "role": "Full-Stack Developer",
+      "period": "2025",
       "season": "S3",
       "bullets": [
-        "Led a team of 5 engineers to rebuild the core platform, improving performance by 60%",
-        "Designed and implemented microservices architecture serving 1M+ requests/day",
-        "Mentored junior developers and established code review best practices"
+        "Collaborated in an agile team to architect and build a ride-hailing kiosk and lightweight web app designed for users without smartphones, mobile data, or cash",
+        "Engineered intuitive front-end interfaces for ride requests, live trip tracking, and payment processing, ensuring accessibility for all users",
+        "Developed robust back-end services handling authentication, ride bookings, payments, and real-time trip status updates with seamless database integration",
+        "Partnered closely with UX designers and QA testers to iteratively improve usability, safety features, and overall system reliability"
       ]
     },
     {
-      "company": "DataStream Labs",
-      "role": "Full Stack Developer",
-      "period": "2020 – 2022",
+      "company": "CPUT Clinic Booking System",
+      "role": "System Analyst & QA Tester",
+      "period": "2025",
       "season": "S2",
       "bullets": [
-        "Built real-time data visualization dashboards used by 200+ enterprise clients",
-        "Reduced API response times by 45% through query optimization and caching",
-        "Implemented CI/CD pipelines reducing deployment time from hours to minutes"
+        "Contributed to full-stack development of an online clinic booking system that streamlined appointment scheduling for CPUT students",
+        "Built responsive front-end booking interfaces and developed server-side logic for comprehensive appointment management workflows",
+        "Designed and implemented relational database schemas to securely store patient records and booking data with proper data integrity",
+        "Led testing and debugging efforts across the application stack, resulting in measurable improvements to system efficiency and user experience"
       ]
     },
     {
-      "company": "StartupXYZ",
-      "role": "Junior Developer",
-      "period": "2019 – 2020",
+      "company": "GUM — CPUT Student Marketplace",
+      "role": "Full-Stack Developer & Tester",
+      "period": "2024",
       "season": "S1",
       "bullets": [
-        "Developed the company's first mobile app reaching 10K downloads in 3 months",
-        "Integrated third-party payment and authentication systems",
-        "Contributed to open-source libraries used by the development community"
+        "Developed a student marketplace mobile application as part of a collaborative team, enabling peer-to-peer listings, messaging, and secure transactions",
+        "Implemented core features including user authentication, product listings management, real-time messaging, and transaction processing",
+        "Conducted thorough requirements analysis, API integration, and iterative testing cycles to ensure scalability, usability, and reliability",
+        "Contributed to continuous improvement through code reviews, performance optimization, and user feedback incorporation"
       ]
     }
   ],
   "skills": {
     "Frontend": [
-      { "name": "React", "level": 95 },
-      { "name": "TypeScript", "level": 90 },
-      { "name": "Tailwind CSS", "level": 88 },
-      { "name": "Next.js", "level": 82 }
+      { "name": "HTML", "level": 90 },
+      { "name": "CSS", "level": 88 },
+      { "name": "JavaScript", "level": 85 },
+      { "name": "React", "level": 75 }
     ],
     "Backend": [
-      { "name": "Node.js", "level": 92 },
-      { "name": "Python", "level": 85 },
-      { "name": "PostgreSQL", "level": 80 },
-      { "name": "GraphQL", "level": 75 }
+      { "name": "Java 21", "level": 90 },
+      { "name": "Python", "level": 80 },
+      { "name": "Node.js", "level": 70 },
+      { "name": "REST APIs", "level": 82 }
     ],
-    "DevOps": [
-      { "name": "Docker", "level": 85 },
-      { "name": "AWS", "level": 78 },
-      { "name": "CI/CD", "level": 88 },
-      { "name": "Kubernetes", "level": 70 }
+    "Database & Tools": [
+      { "name": "MySQL", "level": 88 },
+      { "name": "Git", "level": 85 },
+      { "name": "IntelliJ IDEA", "level": 85 },
+      { "name": "NetBeans", "level": 82 }
     ],
-    "Tools": [
-      { "name": "Git", "level": 95 },
-      { "name": "VS Code", "level": 90 },
-      { "name": "Figma", "level": 72 },
-      { "name": "Jira", "level": 80 }
+    "Methodologies": [
+      { "name": "Agile/Scrum", "level": 85 },
+      { "name": "Testing & QA", "level": 80 },
+      { "name": "System Analysis", "level": 78 },
+      { "name": "CI/CD", "level": 70 }
     ]
   },
   "education": [
     {
-      "institution": "University of Technology",
-      "degree": "B.Sc. Computer Science",
-      "period": "2015 – 2019",
-      "gpa": "3.8/4.0"
+      "institution": "Cape Peninsula University of Technology",
+      "degree": "Diploma in ICT — Application Development",
+      "period": "2024 – Present",
+      "gpa": ""
+    },
+    {
+      "institution": "Cape Peninsula University of Technology",
+      "degree": "Higher Certificate in ICT (NQF5)",
+      "period": "2023",
+      "gpa": ""
+    },
+    {
+      "institution": "Bisho High School",
+      "degree": "Bachelor's Pass",
+      "period": "2017",
+      "gpa": ""
     }
   ],
   "achievements": [
-    { "number": 12, "label": "Projects Completed" },
-    { "number": 3, "label": "Hackathons Won" },
-    { "number": 500, "suffix": "+", "label": "GitHub Stars" },
-    { "number": 15, "suffix": "K+", "label": "Lines of Code" }
+    { "number": 3, "label": "Full-Stack Projects Delivered" },
+    { "number": 3, "label": "Agile Team Collaborations" },
+    { "number": 5, "suffix": "+", "label": "Technologies Mastered" },
+    { "number": 2, "label": "CPUT Qualifications" }
   ]
 }

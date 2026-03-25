@@ -54,7 +54,7 @@ const HeroSection = () => {
             View My Work
           </a>
           <a
-            href="#"
+            href="/Hlomla_Magopeni_CV.pdf" download
             className="px-8 py-3 bg-accent text-accent-foreground font-body text-sm tracking-wider uppercase rounded hover:brightness-110 transition-all duration-300"
           >
             DOWNLOAD RESUME
