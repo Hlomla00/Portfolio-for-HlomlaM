@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { useInView } from "../hooks/useInView";
 import SwipePanel from "./SwipePanel";
-import { Github, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { Github, ExternalLink, ChevronLeft, ChevronRight, Eye } from "lucide-react";
 import projects from "../data/projects.json";
 
 type Project = typeof projects[0];
@@ -56,6 +56,19 @@ const ProjectsSection = () => {
           <div>
             <h2 className="font-display text-5xl md:text-7xl text-foreground mb-4">{selected.title}</h2>
             <p className="font-body text-muted-foreground leading-relaxed mb-6">{selected.description}</p>
+            
+            {/* Project Preview */}
+            {selected.previewUrl && (
+              <div className="mb-8 rounded-lg overflow-hidden border border-border bg-card">
+                <iframe 
+                  src={selected.previewUrl} 
+                  className="w-full h-96"
+                  title={selected.title}
+                  sandbox="allow-scripts allow-same-origin allow-forms"
+                />
+              </div>
+            )}
+
             <div className="flex flex-wrap gap-2 mb-8">
               {selected.techStack.map((t) => (
                 <span key={t} className="px-3 py-1 bg-secondary text-muted-foreground text-xs font-body rounded-full">{t}</span>
@@ -75,9 +88,9 @@ const ProjectsSection = () => {
                   <Github size={16} /> GitHub
                 </a>
               )}
-              {selected.liveUrl && (
-                <a href={selected.liveUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-body text-sm rounded hover:brightness-110 transition-all">
-                  <ExternalLink size={16} /> Live Demo
+              {selected.previewUrl && (
+                <a href={selected.previewUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-body text-sm rounded hover:brightness-110 transition-all">
+                  <Eye size={16} /> Preview
                 </a>
               )}
             </div>

@@ -41,25 +41,13 @@ const AboutSection = () => {
               <div className="grid md:grid-cols-2 gap-12 items-start">
                 {/* Avatar side */}
                 <div className="relative flex justify-center">
-                  <div className="w-64 h-64 rounded-2xl bg-secondary border-2 border-accent flex items-center justify-center">
-                    <span className="font-display text-6xl text-muted-foreground">{profile.initials}</span>
+                  <div className="w-[26rem] h-[26rem] rounded-3xl bg-secondary border-2 border-accent overflow-hidden">
+                    <img
+                      src="/WhatsApp Image 2026-03-25 at 16.17.25.jpeg"
+                      alt="Profile"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  {/* Floating skill tags */}
-                  {skillTags.map((tag, i) => (
-                    <span
-                      key={tag}
-                      className="absolute px-3 py-1 text-xs font-body bg-secondary text-muted-foreground rounded-full"
-                      style={{
-                        top: `${15 + (i % 4) * 22}%`,
-                        left: i < 4 ? `${-5 + (i % 2) * 75}%` : undefined,
-                        right: i >= 4 ? `${-5 + (i % 2) * 75}%` : undefined,
-                        animation: `geo-float ${15 + i * 2}s ease-in-out infinite`,
-                        animationDelay: `${i * 0.5}s`,
-                      }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
                 </div>
                 {/* Bio side */}
                 <div>
@@ -80,8 +68,12 @@ const AboutSection = () => {
             {/* Snapshot */}
             <div style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }} className={mode !== "snapshot" ? "invisible h-0 overflow-hidden" : ""}>
               <div className="max-w-md mx-auto text-center bg-card rounded-2xl p-10">
-                <div className="w-24 h-24 mx-auto rounded-full bg-secondary flex items-center justify-center mb-4">
-                  <span className="font-display text-3xl text-muted-foreground">{profile.initials}</span>
+                <div className="w-24 h-24 mx-auto rounded-full bg-secondary overflow-hidden mb-4">
+                  <img
+                    src="/Hlodomlaada'.jpeg"
+                    alt="Hlodomlada"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="font-display text-2xl text-foreground">{profile.name}</h3>
                 <p className="font-body text-sm text-muted-foreground mt-1">{profile.title}</p>

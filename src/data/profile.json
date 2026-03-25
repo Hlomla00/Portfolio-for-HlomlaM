@@ -1,17 +1,17 @@
 {
   "name": "Hlomla Magopeni",
-  "initials": "HM",
+  "initials": "Hlomla Magopeni",
   "title": "Full-Stack Developer",
-  "bio": "I don't just write code. I build scalable solutions that solve real-world problems and improve community access to services.",
-  "subtitles": ["Full-Stack Developer", "Problem Solver", "Agile Collaborator"],
+  "bio": "Tech enthusiast crafting digital bridges between communities and opportunities through innovative full-stack solutions and problem-solving excellence.",
+  "subtitles": ["Full-Stack Developer", "Problem Solver", "Tech Innovator"],
   "avatar": "",
   "available": true,
   "social": {
-    "github": "https://github.com",
-    "linkedin": "https://linkedin.com",
+    "github": "https://github.com/Hlomla00",
+    "linkedin": "https://www.linkedin.com/in/hlomlamagopeni",
     "twitter": "",
-    "email": "218070349@mycput.ac.za"
+    "email": "hlomlamagopenimusa@gmail.com"
   },
-  "aboutBio": "I'm a motivated Application Development student at the Cape Peninsula University of Technology, passionate about building full-stack applications that make a real difference. From ride-hailing platforms that serve the unconnected to clinic booking systems that streamline healthcare access — I thrive on turning complex problems into clean, maintainable software. I believe technology should bridge gaps, not create them, and every line of code I write is driven by that conviction.",
+  "aboutBio": "I'm Hlomla Magopeni, a 3rd-year Application Development student at the Cape Peninsula University of Technology. I'm passionate about building full-stack applications that solve real problems—whether it's connecting unserved communities, streamlining healthcare access, or creating tools that empower students.\n\nI especially enjoy identifying problems and designing solutions that simplify life and make technology truly convenient. I thrive on turning complex challenges into clean, maintainable software, collaborating with teams, and creating impactful solutions. For me, technology isn't just code—it's a bridge that makes life easier, connects people, and opens opportunities.",
   "traits": ["Problem Solver", "Agile Team Player", "Clean Code Advocate", "Community-Driven", "Detail Oriented"]
 }

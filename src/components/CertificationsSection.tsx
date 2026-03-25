@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useInView } from "../hooks/useInView";
 import SwipePanel from "./SwipePanel";
-import { CheckCircle, ExternalLink } from "lucide-react";
+import { CheckCircle, Download, ExternalLink } from "lucide-react";
 import certifications from "../data/certifications.json";
 
 type Cert = typeof certifications[0];
@@ -52,14 +52,33 @@ const CertificationsSection = () => {
             <h2 className="font-display text-4xl md:text-5xl text-foreground mb-2">{selected.name}</h2>
             <p className="font-body text-muted-foreground mb-1">{selected.issuer}</p>
             <p className="font-body text-xs text-muted-foreground mb-6">Credential ID: {selected.credentialId}</p>
+            
+            {/* PDF Display */}
+            {"pdfUrl" in selected && selected.pdfUrl && (
+              <div className="mb-8 rounded-lg overflow-hidden border border-border bg-card">
+                <iframe 
+                  src={selected.pdfUrl} 
+                  className="w-full h-96"
+                  title={selected.name}
+                />
+              </div>
+            )}
+
             <div className="flex flex-wrap justify-center gap-2 mb-8">
               {selected.skills.map((s) => (
                 <span key={s} className="px-3 py-1 bg-secondary text-muted-foreground text-xs font-body rounded-full">{s}</span>
               ))}
             </div>
-            <a href={selected.verifyUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-body text-sm rounded hover:brightness-110 transition-all">
-              <ExternalLink size={16} /> Verify Certificate
-            </a>
+            
+            {"pdfUrl" in selected && selected.pdfUrl ? (
+              <a href={selected.pdfUrl} download className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-body text-sm rounded hover:brightness-110 transition-all">
+                <Download size={16} /> Download Certificate
+              </a>
+            ) : (
+              <a href={selected.verifyUrl || "#"} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-body text-sm rounded hover:brightness-110 transition-all">
+                <ExternalLink size={16} /> Verify Certificate
+              </a>
+            )}
           </div>
         )}
       </SwipePanel>

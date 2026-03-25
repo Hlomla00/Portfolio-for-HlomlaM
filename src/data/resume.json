@@ -41,14 +41,11 @@
     "Frontend": [
       { "name": "HTML", "level": 90 },
       { "name": "CSS", "level": 88 },
-      { "name": "JavaScript", "level": 85 },
-      { "name": "React", "level": 75 }
+      { "name": "JavaScript", "level": 85 }
     ],
     "Backend": [
       { "name": "Java 21", "level": 90 },
-      { "name": "Python", "level": 80 },
-      { "name": "Node.js", "level": 70 },
-      { "name": "REST APIs", "level": 82 }
+      { "name": "Python", "level": 80 }
     ],
     "Database & Tools": [
       { "name": "MySQL", "level": 88 },
@@ -60,7 +57,7 @@
       { "name": "Agile/Scrum", "level": 85 },
       { "name": "Testing & QA", "level": 80 },
       { "name": "System Analysis", "level": 78 },
-      { "name": "CI/CD", "level": 70 }
+      { "name": "REST APIs", "level": 82 }
     ]
   },
   "education": [

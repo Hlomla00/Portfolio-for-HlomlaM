@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import profile from "../data/profile.json";
 
 const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
   const [phase, setPhase] = useState<"logo" | "bar" | "done">("logo");
@@ -23,7 +24,7 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
           textShadow: "0 0 40px hsl(357 91% 47% / 0.6), 0 0 80px hsl(357 91% 47% / 0.3)",
         }}
       >
-        AC
+        {profile.initials}
       </div>
       {phase !== "logo" && (
         <div className="mt-8 h-1 w-48 rounded-full overflow-hidden bg-secondary">

@@ -73,7 +73,7 @@ All portfolio content is driven by JSON files in `src/data/`. To make it your ow
 ## 📬 Contact
 
 - **Email**: 218070349@mycput.ac.za
-- **GitHub**: [github.com](https://github.com)
+- **GitHub**: [github.com/Hlomla00](https://github.com/Hlomla00)
 - **LinkedIn**: [linkedin.com](https://linkedin.com)
 
 ---

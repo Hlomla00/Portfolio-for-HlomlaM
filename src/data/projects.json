@@ -3,10 +3,10 @@
     "id": "1",
     "title": "SafeRide — Ride Hailing Platform",
     "category": "Web",
-    "description": "An all-in-one ride-hailing kiosk and web app designed for users without smartphones, mobile data, or cash. SafeRide bridges the digital divide by making safe, trackable transportation accessible to everyone — from kiosk terminals in community centers to lightweight browser-based booking.",
+    "description": "An all-in-one ride-hailing kiosk and web app designed for users without smartphones, mobile data, or cash. SafeRide bridges the digital divide by making safe, trackable transportation accessible to everyone — from kiosk terminals in busy areas such as malls, airports, restaurants, and fuel stations to lightweight browser-based booking.",
     "techStack": ["Java 21", "HTML", "CSS", "JavaScript", "MySQL", "REST API"],
-    "liveUrl": "",
-    "githubUrl": "https://github.com",
+    "previewUrl": "https://saferide-system.vercel.app/",
+    "githubUrl": "https://github.com/Hlomla00",
     "images": [],
     "metrics": ["Real-time trip tracking", "Cashless & cash payments", "Kiosk + web interface"],
     "featured": true
@@ -17,8 +17,8 @@
     "category": "Web",
     "description": "A full-stack online clinic booking system built to streamline appointment scheduling for students at the Cape Peninsula University of Technology. Replaced manual booking with an efficient digital workflow, reducing wait times and improving healthcare accessibility on campus.",
     "techStack": ["Java", "HTML", "CSS", "JavaScript", "MySQL", "NetBeans"],
-    "liveUrl": "",
-    "githubUrl": "https://github.com",
+    "previewUrl": "https://clinicbookingsystem.netlify.app/",
+    "githubUrl": "https://github.com/Hlomla00",
     "images": [],
     "metrics": ["Automated scheduling", "Secure patient data", "Improved efficiency"],
     "featured": true
@@ -30,7 +30,7 @@
     "description": "A peer-to-peer student marketplace mobile application enabling CPUT students to buy, sell, and trade items securely. Features include user authentication, real-time messaging, product listings with image uploads, and in-app transaction processing.",
     "techStack": ["Java", "Android", "MySQL", "REST API", "IntelliJ IDEA"],
     "liveUrl": "",
-    "githubUrl": "https://github.com",
+    "githubUrl": "https://github.com/Hlomla00",
     "images": [],
     "metrics": ["User authentication", "Real-time messaging", "Secure transactions"],
     "featured": true
