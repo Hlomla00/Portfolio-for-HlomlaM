@@ -1,17 +1,46 @@
 import { useState } from "react";
 import { useInView } from "../hooks/useInView";
-import { Github, Linkedin, Twitter, Mail, ArrowRight, Check } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, ArrowRight, Check, Loader2 } from "lucide-react";
+import emailjs from '@emailjs/browser';
 import profile from "../data/profile.json";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const { ref, inView } = useInView();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 4000);
+    setLoading(true);
+    setError("");
+
+    try {
+      // EmailJS configuration - you'll need to set these up in your EmailJS account
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'your_service_id';
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'your_template_id';
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'your_public_key';
+
+      const templateParams = {
+        from_name: form.name,
+        from_email: form.email,
+        subject: form.subject,
+        message: form.message,
+        to_email: profile.social.email,
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+      setSent(true);
+      setForm({ name: "", email: "", subject: "", message: "" });
+      setTimeout(() => setSent(false), 4000);
+    } catch (err) {
+      console.error('Email send failed:', err);
+      setError("Failed to send message. Please try again or contact me directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -47,6 +76,11 @@ const ContactSection = () => {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-8 text-left">
+            {error && (
+              <div className="p-4 bg-destructive/10 border border-destructive/20 rounded-lg">
+                <p className="font-body text-destructive text-sm">{error}</p>
+              </div>
+            )}
             {(["name", "email", "subject", "message"] as const).map((field) => (
               <div key={field}>
                 {field === "message" ? (
@@ -56,7 +90,8 @@ const ContactSection = () => {
                     onChange={(e) => setForm((p) => ({ ...p, [field]: e.target.value }))}
                     rows={4}
                     required
-                    className="w-full bg-transparent border-b border-border text-foreground font-body placeholder:text-muted-foreground/50 focus:border-accent outline-none transition-colors py-3 resize-none"
+                    disabled={loading}
+                    className="w-full bg-transparent border-b border-border text-foreground font-body placeholder:text-muted-foreground/50 focus:border-accent outline-none transition-colors py-3 resize-none disabled:opacity-50"
                   />
                 ) : (
                   <input
@@ -65,17 +100,28 @@ const ContactSection = () => {
                     value={form[field]}
                     onChange={(e) => setForm((p) => ({ ...p, [field]: e.target.value }))}
                     required
-                    className="w-full bg-transparent border-b border-border text-foreground font-body placeholder:text-muted-foreground/50 focus:border-accent outline-none transition-colors py-3"
+                    disabled={loading}
+                    className="w-full bg-transparent border-b border-border text-foreground font-body placeholder:text-muted-foreground/50 focus:border-accent outline-none transition-colors py-3 disabled:opacity-50"
                   />
                 )}
               </div>
             ))}
             <button
               type="submit"
-              className="w-full py-4 bg-accent text-accent-foreground font-body text-sm tracking-widest uppercase rounded flex items-center justify-center gap-2 group hover:brightness-110 transition-all"
+              disabled={loading}
+              className="w-full py-4 bg-accent text-accent-foreground font-body text-sm tracking-widest uppercase rounded flex items-center justify-center gap-2 group hover:brightness-110 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              SEND MESSAGE
-              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1.5" />
+              {loading ? (
+                <>
+                  <Loader2 size={16} className="animate-spin" />
+                  SENDING...
+                </>
+              ) : (
+                <>
+                  SEND MESSAGE
+                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-1.5" />
+                </>
+              )}
             </button>
           </form>
         )}

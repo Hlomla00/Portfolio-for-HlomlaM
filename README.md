@@ -192,13 +192,30 @@ npm run build
    }
    ```
 
-4. **Theme Customization**
-   ```css
-   /* src/index.css */
-   :root {
-     --accent: 357 91% 47%; /* Your brand color */
-   }
-   ```
+### Email Configuration (Contact Form)
+
+To enable the contact form to send emails:
+
+1. **Create an EmailJS account** at [emailjs.com](https://www.emailjs.com/)
+2. **Create a new email service** (Gmail, Outlook, etc.)
+3. **Create an email template** with these variables:
+   - `{{from_name}}` - Sender's name
+   - `{{from_email}}` - Sender's email
+   - `{{subject}}` - Message subject
+   - `{{message}}` - Message content
+   - `{{to_email}}` - Your email address
+4. **Copy your credentials** and create a `.env` file:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` with your EmailJS credentials:
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
 
 ### 🎨 Design System
 
