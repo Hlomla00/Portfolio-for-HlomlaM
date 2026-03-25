@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useInView } from "../hooks/useInView";
 import { Github, Linkedin, Twitter, Mail, ArrowRight, Check, Loader2 } from "lucide-react";
-import emailjs from '@emailjs/browser';
 import profile from "../data/profile.json";
 
 const ContactSection = () => {
@@ -17,26 +16,28 @@ const ContactSection = () => {
     setError("");
 
     try {
-      // EmailJS configuration - you'll need to set these up in your EmailJS account
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'your_service_id';
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'your_template_id';
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'your_public_key';
+      const response = await fetch("https://formspree.io/f/mykbgrqy", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          subject: form.subject,
+          message: form.message,
+        }),
+      });
 
-      const templateParams = {
-        from_name: form.name,
-        from_email: form.email,
-        subject: form.subject,
-        message: form.message,
-        to_email: profile.social.email,
-      };
-
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
-
-      setSent(true);
-      setForm({ name: "", email: "", subject: "", message: "" });
-      setTimeout(() => setSent(false), 4000);
+      if (response.ok) {
+        setSent(true);
+        setForm({ name: "", email: "", subject: "", message: "" });
+        setTimeout(() => setSent(false), 4000);
+      } else {
+        throw new Error("Failed to send message");
+      }
     } catch (err) {
-      console.error('Email send failed:', err);
+      console.error('Form submission failed:', err);
       setError("Failed to send message. Please try again or contact me directly.");
     } finally {
       setLoading(false);

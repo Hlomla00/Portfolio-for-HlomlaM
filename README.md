@@ -194,28 +194,20 @@ npm run build
 
 ### Email Configuration (Contact Form)
 
-To enable the contact form to send emails:
+The contact form uses **Formspree** for email delivery - much simpler than EmailJS!
 
-1. **Create an EmailJS account** at [emailjs.com](https://www.emailjs.com/)
-2. **Create a new email service** (Gmail, Outlook, etc.)
-3. **Create an email template** with these variables:
-   - `{{from_name}}` - Sender's name
-   - `{{from_email}}` - Sender's email
-   - `{{subject}}` - Message subject
-   - `{{message}}` - Message content
-   - `{{to_email}}` - Your email address
-4. **Copy your credentials** and create a `.env` file:
+1. **Formspree automatically handles** email sending to your inbox
+2. **No complex setup** required - just the endpoint URL
+3. **Professional emails** with all form data included
+4. **Spam protection** and delivery guarantees
 
-```bash
-cp .env.example .env
-```
+**Your form is already configured** with endpoint: `https://formspree.io/f/mykbgrqy`
 
-Edit `.env` with your EmailJS credentials:
-```env
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_public_key
-```
+Formspree emails include:
+- Sender's name and email
+- Subject and message
+- Automatic formatting
+- Direct reply links
 
 ### 🎨 Design System
 
