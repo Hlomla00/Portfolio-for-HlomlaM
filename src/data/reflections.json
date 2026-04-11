@@ -1,0 +1,31 @@
+{
+  "reflections": [
+    {
+      "id": "markdown",
+      "title": "Reflection on coding in Markdown",
+      "method": "STAR",
+      "situation": "As part of the PRP370S Project Presentation 3 module at CPUT, I was required to build and document a professional digital portfolio using GitHub and Markdown — a language I had never formally used before.",
+      "task": "My task was to write and structure the entire portfolio content in GitHub Flavoured Markdown, including my CV, project descriptions, academic history, and reflections, then deploy it to GitHub Pages.",
+      "action": "I studied the GitHub Markdown documentation and practised formatting syntax including headings, tables, lists, badges, and embedded links. I structured my CV as a readable Markdown document, used tables for skills and education, and applied consistent formatting across all sections of the README.",
+      "result": "I successfully coded my full CV and portfolio content in Markdown, producing a clean, readable, and well-structured document. I gained a practical skill I now use daily for README files, documentation, and project communication on GitHub."
+    },
+    {
+      "id": "interview",
+      "title": "Reflection on mock interview experience",
+      "method": "STAR",
+      "situation": "As part of work readiness training at CPUT, I was required to participate in a mock interview simulating a real job interview for a Full-Stack Developer WIL position.",
+      "task": "I needed to prepare for and record a mock interview that demonstrated my technical knowledge, communication skills, and ability to present myself professionally to a potential employer.",
+      "action": "I researched common interview questions for junior developers, prepared answers using the STAR method, practised explaining my projects clearly, and rehearsed my responses. I focused on speaking confidently about my experience with Java, MySQL, and agile teamwork.",
+      "result": "The mock interview improved my confidence significantly. I identified areas where I needed to improve — such as being more concise and using technical vocabulary precisely. It was invaluable preparation for real WIL and graduate interviews."
+    },
+    {
+      "id": "githubpages",
+      "title": "Reflection on the use of GitHub Pages",
+      "method": "STAR",
+      "situation": "After building my portfolio locally, I needed to deploy it publicly so that lecturers, moderators, and potential employers could access it from any device via a live URL.",
+      "task": "My task was to configure and deploy my React + Vite portfolio to GitHub Pages, ensuring it built correctly, loaded all assets, and was accessible at a public URL.",
+      "action": "I configured the vite.config.ts base path for GitHub Pages, updated the package.json deploy scripts using gh-pages, resolved asset path issues that caused a blank page on deployment, and pushed the built dist/ folder to the gh-pages branch.",
+      "result": "My portfolio is now live and publicly accessible. The experience taught me the full deployment pipeline — from local development to production — and gave me practical knowledge of CI/CD concepts I will use throughout my career."
+    }
+  ]
+}

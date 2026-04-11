@@ -3,36 +3,51 @@
     "id": "1",
     "title": "SafeRide — Ride Hailing Platform",
     "category": "Web",
-    "description": "An all-in-one ride-hailing kiosk and web app designed for users without smartphones, mobile data, or cash. SafeRide bridges the digital divide by making safe, trackable transportation accessible to everyone — from kiosk terminals in busy areas such as malls, airports, restaurants, and fuel stations to lightweight browser-based booking.",
+    "description": "A ride-hailing kiosk and lightweight web app designed for people without smartphones, mobile data, or cash. Built as part of an agile team, I handled the full stack: front-end kiosk screens, back-end services for logins, payments, ride bookings and live trip tracking, and database integration. Focused on safety, usability, and reliability for underserved communities.",
     "techStack": ["Java 21", "HTML", "CSS", "JavaScript", "MySQL", "REST API"],
     "previewUrl": "https://saferide-system.vercel.app/",
     "githubUrl": "https://github.com/Hlomla00",
     "images": [],
-    "metrics": ["Real-time trip tracking", "Cashless & cash payments", "Kiosk + web interface"],
+    "metrics": [
+      { "label": "Team Size", "value": "6" },
+      { "label": "Role", "value": "Full-Stack Dev" },
+      { "label": "Year", "value": "2025" },
+      { "label": "Stack Layers", "value": "3" }
+    ],
     "featured": true
   },
   {
     "id": "2",
     "title": "CPUT Clinic Booking System",
     "category": "Web",
-    "description": "A full-stack online clinic booking system built to streamline appointment scheduling for students at the Cape Peninsula University of Technology. Replaced manual booking with an efficient digital workflow, reducing wait times and improving healthcare accessibility on campus.",
+    "description": "An online clinic appointment system built to streamline healthcare access for CPUT students. I contributed to front-end booking interfaces, developed server-side appointment logic, and designed relational databases to securely store patient and booking data. Also handled testing, debugging, and deployment in collaboration with the team.",
     "techStack": ["Java", "HTML", "CSS", "JavaScript", "MySQL", "NetBeans"],
     "previewUrl": "https://clinicbookingsystem.netlify.app/",
     "githubUrl": "https://github.com/Hlomla00",
     "images": [],
-    "metrics": ["Automated scheduling", "Secure patient data", "Improved efficiency"],
+    "metrics": [
+      { "label": "Role", "value": "Analyst & QA" },
+      { "label": "Year", "value": "2025" },
+      { "label": "Users", "value": "Students" },
+      { "label": "DB Tables", "value": "5+" }
+    ],
     "featured": true
   },
   {
     "id": "3",
     "title": "GUM — Student Marketplace",
     "category": "Mobile",
-    "description": "A peer-to-peer student marketplace mobile application enabling CPUT students to buy, sell, and trade items securely. Features include user authentication, real-time messaging, product listings with image uploads, and in-app transaction processing.",
+    "description": "A mobile student marketplace app for CPUT students to buy, sell, and connect on campus. Built user authentication, listings, messaging, and transaction features. Worked across front-end, back-end, and database layers. Participated in requirements analysis, API integration, and iterative testing to ensure scalability and usability.",
     "techStack": ["Java", "Android", "MySQL", "REST API", "IntelliJ IDEA"],
     "liveUrl": "",
     "githubUrl": "https://github.com/Hlomla00",
     "images": [],
-    "metrics": ["User authentication", "Real-time messaging", "Secure transactions"],
+    "metrics": [
+      { "label": "Team Size", "value": "5" },
+      { "label": "Role", "value": "Dev & Tester" },
+      { "label": "Year", "value": "2024" },
+      { "label": "Features", "value": "4 core" }
+    ],
     "featured": true
   }
 ]

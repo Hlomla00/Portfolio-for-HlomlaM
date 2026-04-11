@@ -154,7 +154,7 @@ const SkillBar = ({ name, level, delay = 0 }: { name: string; level: number; del
   );
 };
 
-const CountCard = ({ number, suffix, label }: { number: number; suffix?: string; label: string }) => {
+const CountCard = ({ value, suffix, label }: { value: number; suffix?: string; label: string }) => {
   const { ref, inView } = useInView(0.3);
   const [count, setCount] = useState(0);
   const counted = useRef(false);
@@ -163,14 +163,14 @@ const CountCard = ({ number, suffix, label }: { number: number; suffix?: string;
     if (inView && !counted.current) {
       counted.current = true;
       let start = 0;
-      const step = Math.ceil(number / 40);
+      const step = Math.ceil(value / 40);
       const interval = setInterval(() => {
         start += step;
-        if (start >= number) { setCount(number); clearInterval(interval); }
+        if (start >= value) { setCount(value); clearInterval(interval); }
         else setCount(start);
       }, 30);
     }
-  }, [inView, number]);
+  }, [inView, value]);
 
   return (
     <div ref={ref} className="bg-card rounded-lg p-6 text-center border border-border">

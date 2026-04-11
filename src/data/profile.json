@@ -1,17 +1,16 @@
 {
-  "name": "Hlomla Magopeni",
-  "initials": "Hlomla Magopeni",
+  "name": "Hlomla Moosa Magopeni",
+  "initials": "HM",
   "title": "Full-Stack Developer",
-  "bio": "Tech enthusiast crafting digital bridges between communities and opportunities through innovative full-stack solutions and problem-solving excellence.",
-  "subtitles": ["Full-Stack Developer", "Problem Solver", "Tech Innovator"],
-  "avatar": "",
+  "bio": "Application Development student at CPUT building real-world full-stack solutions — from ride-hailing kiosks to student marketplaces — using Java, JavaScript, and MySQL.",
+  "subtitles": ["Full-Stack Developer", "System Analyst", "QA Tester", "Problem Solver"],
   "available": true,
   "social": {
     "github": "https://github.com/Hlomla00",
     "linkedin": "https://www.linkedin.com/in/hlomlamagopeni",
     "twitter": "",
-    "email": "hlomlamagopenimusa@gmail.com"
+    "email": "218070349@mycput.ac.za"
   },
-  "aboutBio": "I'm Hlomla Magopeni, a 3rd-year Application Development student at the Cape Peninsula University of Technology. I'm passionate about building full-stack applications that solve real problems—whether it's connecting unserved communities, streamlining healthcare access, or creating tools that empower students.\n\nI especially enjoy identifying problems and designing solutions that simplify life and make technology truly convenient. I thrive on turning complex challenges into clean, maintainable software, collaborating with teams, and creating impactful solutions. For me, technology isn't just code—it's a bridge that makes life easier, connects people, and opens opportunities.",
-  "traits": ["Problem Solver", "Agile Team Player", "Clean Code Advocate", "Community-Driven", "Detail Oriented"]
+  "aboutBio": "I'm Hlomla Moosa Magopeni, a 3rd-year Diploma in ICT Application Development student at CPUT. I build full-stack applications that solve real community problems — from helping people request rides safely without a smartphone, to streamlining clinic bookings for students on campus. I work across the full stack: designing front-end interfaces, writing back-end logic, and integrating relational databases. I thrive in agile teams, take quality seriously, and write code that's clean and maintainable. Currently seeking a Work Integrated Learning (WIL) opportunity as a Full-Stack Developer.",
+  "traits": ["Full-Stack Developer", "Agile Team Player", "Clean Code Advocate", "System Analyst", "QA Tester", "Community-Driven", "Detail Oriented"]
 }

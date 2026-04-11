@@ -67,7 +67,10 @@ const ContactSection = () => {
         </div>
 
         <h2 className="font-display text-5xl md:text-8xl text-foreground mb-4">LET'S BUILD SOMETHING</h2>
-        <p className="font-body text-muted-foreground mb-12">Open to full-time roles, freelance projects, and collaborations.</p>
+        <p className="font-body text-muted-foreground mb-12">
+          Open to full-time roles, freelance projects, and collaborations.<br/>
+          <span className="text-accent font-medium">Response time: Usually within 24 hours</span>
+        </p>
 
         {sent ? (
           <div className="animate-float-up">

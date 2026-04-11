@@ -76,9 +76,9 @@ const ProjectsSection = () => {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
               {selected.metrics.map((m) => (
-                <div key={m} className="bg-secondary rounded-lg p-4 text-center">
-                  <span className="font-display text-2xl text-accent">{m.split(" ")[0]}</span>
-                  <p className="font-body text-xs text-muted-foreground mt-1">{m.split(" ").slice(1).join(" ")}</p>
+                <div key={m.label} className="bg-secondary rounded-lg p-4 text-center">
+                  <span className="font-display text-2xl text-accent">{m.value}</span>
+                  <p className="font-body text-xs text-muted-foreground mt-1">{m.label}</p>
                 </div>
               ))}
             </div>

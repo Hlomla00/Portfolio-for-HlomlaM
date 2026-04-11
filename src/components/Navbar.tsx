@@ -7,6 +7,7 @@ const navLinks = [
   { label: "Journey", href: "#academics" },
   { label: "Resume", href: "#resume" },
   { label: "Certs", href: "#certifications" },
+  { label: "Reflections", href: "#reflections" },
   { label: "Contact", href: "#contact" },
 ];
 

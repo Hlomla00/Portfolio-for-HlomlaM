@@ -6,10 +6,11 @@
       "period": "2025",
       "season": "S3",
       "bullets": [
-        "Collaborated in an agile team to architect and build a ride-hailing kiosk and lightweight web app designed for users without smartphones, mobile data, or cash",
-        "Engineered intuitive front-end interfaces for ride requests, live trip tracking, and payment processing, ensuring accessibility for all users",
-        "Developed robust back-end services handling authentication, ride bookings, payments, and real-time trip status updates with seamless database integration",
-        "Partnered closely with UX designers and QA testers to iteratively improve usability, safety features, and overall system reliability"
+        "Designed and built front-end kiosk screens for users without smartphones or data",
+        "Developed back-end services for user logins, payments, ride bookings and live trip tracking",
+        "Integrated MySQL database for persistent ride and user data",
+        "Collaborated in an agile team of 6 with designers and QA testers",
+        "Focused on safety and reliability for underserved communities in Cape Town"
       ]
     },
     {
@@ -18,10 +19,11 @@
       "period": "2025",
       "season": "S2",
       "bullets": [
-        "Contributed to full-stack development of an online clinic booking system that streamlined appointment scheduling for CPUT students",
-        "Built responsive front-end booking interfaces and developed server-side logic for comprehensive appointment management workflows",
-        "Designed and implemented relational database schemas to securely store patient records and booking data with proper data integrity",
-        "Led testing and debugging efforts across the application stack, resulting in measurable improvements to system efficiency and user experience"
+        "Built front-end booking interfaces for student appointment scheduling",
+        "Developed server-side logic to manage appointment creation, updates, and cancellations",
+        "Designed relational database schema to securely store patient and booking records",
+        "Performed system analysis, testing, debugging, and assisted with deployment",
+        "Improved system efficiency and student experience for CPUT Health Services"
       ]
     },
     {
@@ -30,10 +32,11 @@
       "period": "2024",
       "season": "S1",
       "bullets": [
-        "Developed a student marketplace mobile application as part of a collaborative team, enabling peer-to-peer listings, messaging, and secure transactions",
-        "Implemented core features including user authentication, product listings management, real-time messaging, and transaction processing",
-        "Conducted thorough requirements analysis, API integration, and iterative testing cycles to ensure scalability, usability, and reliability",
-        "Contributed to continuous improvement through code reviews, performance optimization, and user feedback incorporation"
+        "Implemented user authentication, product listings, messaging, and transaction features",
+        "Worked across front-end, back-end, and database layers in a team of 5",
+        "Conducted requirements analysis and participated in API integration",
+        "Performed iterative testing and debugging to improve scalability and usability",
+        "Delivered a functional mobile marketplace app used by CPUT students"
       ]
     }
   ],
@@ -81,9 +84,11 @@
     }
   ],
   "achievements": [
-    { "number": 3, "label": "Full-Stack Projects Delivered" },
-    { "number": 3, "label": "Agile Team Collaborations" },
-    { "number": 5, "suffix": "+", "label": "Technologies Mastered" },
-    { "number": 2, "label": "CPUT Qualifications" }
+    { "label": "Full-Stack Projects Delivered", "value": 3 },
+    { "label": "Agile Team Collaborations", "value": 3 },
+    { "label": "Technologies Mastered", "value": 9 },
+    { "label": "Certifications Earned", "value": 8 },
+    { "label": "CPUT Qualifications", "value": 2 },
+    { "label": "Years Coding", "value": 3 }
   ]
 }
