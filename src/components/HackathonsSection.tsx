@@ -101,11 +101,13 @@ const HackathonCard = ({
   index: number;
   inView: boolean;
 }) => {
-  const images = hackathon.images ?? [];
+  const images: string[] = (hackathon as { images?: string[] }).images ?? [];
   const hasImages = images.length > 0;
 
   const [slide, setSlide] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  // Track which slides have had their src set — start with only slide 0
+  const [loaded, setLoaded] = useState<Set<number>>(() => new Set([0]));
 
   // Auto-slideshow
   useEffect(() => {
@@ -113,6 +115,17 @@ const HackathonCard = ({
     const id = setInterval(() => setSlide((s) => (s + 1) % images.length), 3000);
     return () => clearInterval(id);
   }, [hasImages, images.length]);
+
+  // As the current slide changes, unlock src for current + next (progressive load)
+  useEffect(() => {
+    if (!hasImages) return;
+    setLoaded((prev) => {
+      const next = new Set(prev);
+      next.add(slide);
+      next.add((slide + 1) % images.length); // preload next
+      return next;
+    });
+  }, [slide, hasImages, images.length]);
 
   return (
     <>
@@ -134,11 +147,12 @@ const HackathonCard = ({
             className="relative w-full h-52 cursor-pointer overflow-hidden group"
             onClick={() => setLightboxOpen(true)}
           >
-            {/* Slides */}
+            {/* Slides — only set src once a slide has been reached to avoid
+                fetching all 21 large images at page load */}
             {images.map((src, i) => (
               <img
                 key={src}
-                src={src}
+                src={loaded.has(i) ? src : undefined}
                 alt={`${hackathon.project} photo ${i + 1}`}
                 className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
                   i === slide ? "opacity-100" : "opacity-0"
