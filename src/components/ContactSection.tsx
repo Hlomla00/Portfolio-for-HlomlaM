@@ -1,47 +1,22 @@
 import { useState } from "react";
 import { useInView } from "../hooks/useInView";
-import { Github, Linkedin, Twitter, Mail, ArrowRight, Check, Loader2 } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, MessageCircle } from "lucide-react";
 import profile from "../data/profile.json";
 
 const ContactSection = () => {
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
-  const [sent, setSent] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
   const { ref, inView } = useInView();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-    setError("");
+    const url = `https://wa.me/27698570219?text=Name: ${encodeURIComponent(form.name)}%0AEmail: ${encodeURIComponent(form.email)}%0AMessage: ${encodeURIComponent(form.message)}`;
+    window.open(url, "_blank");
+  };
 
-    try {
-      const response = await fetch("https://formspree.io/f/mykbgrqy", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: form.name,
-          email: form.email,
-          subject: form.subject,
-          message: form.message,
-        }),
-      });
-
-      if (response.ok) {
-        setSent(true);
-        setForm({ name: "", email: "", subject: "", message: "" });
-        setTimeout(() => setSent(false), 4000);
-      } else {
-        throw new Error("Failed to send message");
-      }
-    } catch (err) {
-      console.error('Form submission failed:', err);
-      setError("Failed to send message. Please try again or contact me directly.");
-    } finally {
-      setLoading(false);
-    }
+  const handleEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+    const url = `mailto:218070349@mycput.ac.za?subject=Portfolio Enquiry from ${encodeURIComponent(form.name)}&body=Name: ${encodeURIComponent(form.name)}%0AEmail: ${encodeURIComponent(form.email)}%0AMessage: ${encodeURIComponent(form.message)}`;
+    window.open(url, "_blank");
   };
 
   return (
@@ -72,63 +47,49 @@ const ContactSection = () => {
           <span className="text-accent font-medium">Response time: Usually within 24 hours</span>
         </p>
 
-        {sent ? (
-          <div className="animate-float-up">
-            <Check className="mx-auto text-accent mb-4" size={64} />
-            <p className="font-display text-3xl text-foreground">Message Sent.</p>
-            <p className="font-body text-muted-foreground mt-2">I'll be in touch.</p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-8 text-left">
-            {error && (
-              <div className="p-4 bg-destructive/10 border border-destructive/20 rounded-lg">
-                <p className="font-body text-destructive text-sm">{error}</p>
-              </div>
-            )}
-            {(["name", "email", "subject", "message"] as const).map((field) => (
-              <div key={field}>
-                {field === "message" ? (
-                  <textarea
-                    placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
-                    value={form[field]}
-                    onChange={(e) => setForm((p) => ({ ...p, [field]: e.target.value }))}
-                    rows={4}
-                    required
-                    disabled={loading}
-                    className="w-full bg-transparent border-b border-border text-foreground font-body placeholder:text-muted-foreground/50 focus:border-accent outline-none transition-colors py-3 resize-none disabled:opacity-50"
-                  />
-                ) : (
-                  <input
-                    type={field === "email" ? "email" : "text"}
-                    placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
-                    value={form[field]}
-                    onChange={(e) => setForm((p) => ({ ...p, [field]: e.target.value }))}
-                    required
-                    disabled={loading}
-                    className="w-full bg-transparent border-b border-border text-foreground font-body placeholder:text-muted-foreground/50 focus:border-accent outline-none transition-colors py-3 disabled:opacity-50"
-                  />
-                )}
-              </div>
-            ))}
+        <form className="space-y-8 text-left">
+          {(["name", "email", "message"] as const).map((field) => (
+            <div key={field}>
+              {field === "message" ? (
+                <textarea
+                  placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
+                  value={form[field]}
+                  onChange={(e) => setForm((p) => ({ ...p, [field]: e.target.value }))}
+                  rows={4}
+                  required
+                  className="w-full bg-transparent border-b border-border text-foreground font-body placeholder:text-muted-foreground/50 focus:border-accent outline-none transition-colors py-3 resize-none"
+                />
+              ) : (
+                <input
+                  type={field === "email" ? "email" : "text"}
+                  placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
+                  value={form[field]}
+                  onChange={(e) => setForm((p) => ({ ...p, [field]: e.target.value }))}
+                  required
+                  className="w-full bg-transparent border-b border-border text-foreground font-body placeholder:text-muted-foreground/50 focus:border-accent outline-none transition-colors py-3"
+                />
+              )}
+            </div>
+          ))}
+          <div className="flex gap-4">
             <button
               type="submit"
-              disabled={loading}
-              className="w-full py-4 bg-accent text-accent-foreground font-body text-sm tracking-widest uppercase rounded flex items-center justify-center gap-2 group hover:brightness-110 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              onClick={handleWhatsApp}
+              className="flex-1 py-4 bg-[#25D366] text-white font-body text-sm tracking-widest uppercase rounded flex items-center justify-center gap-2 hover:brightness-110 transition-all"
             >
-              {loading ? (
-                <>
-                  <Loader2 size={16} className="animate-spin" />
-                  SENDING...
-                </>
-              ) : (
-                <>
-                  SEND MESSAGE
-                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-1.5" />
-                </>
-              )}
+              <MessageCircle size={16} />
+              SEND VIA WHATSAPP
             </button>
-          </form>
-        )}
+            <button
+              type="submit"
+              onClick={handleEmail}
+              className="flex-1 py-4 bg-accent text-accent-foreground font-body text-sm tracking-widest uppercase rounded flex items-center justify-center gap-2 hover:brightness-110 transition-all"
+            >
+              <Mail size={16} />
+              SEND VIA EMAIL
+            </button>
+          </div>
+        </form>
 
         {/* Social */}
         <div className="flex justify-center gap-4 mt-12">

@@ -5,6 +5,9 @@ import certifications from "../data/certifications.json";
 
 type Cert = typeof certifications[0];
 
+// Matric cert is portrait (A4 tall); everything else is landscape (Coursera/Google certs)
+const isPortrait = (c: Cert) => c.credentialId === "MATRIC-2017";
+
 const CertificationsSection = () => {
   const [selected, setSelected] = useState<Cert | null>(null);
 
@@ -18,6 +21,9 @@ const CertificationsSection = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {certifications.map((c, i) => {
             const pdfUrl = (c as { pdfUrl?: string }).pdfUrl;
+            const imgUrl = pdfUrl
+              ? pdfUrl.replace("/certificates/", "/certificates/images/").replace(".pdf", ".jpg")
+              : null;
             return (
               <div
                 key={c.credentialId}
@@ -25,14 +31,17 @@ const CertificationsSection = () => {
                 className="cursor-pointer group"
                 style={{ animation: `cert-fade-in 0.4s ease-out ${i * 0.08}s both` }}
               >
-                <div className="relative aspect-[3/4] bg-card rounded-lg border border-border overflow-hidden transition-all duration-300 group-hover:scale-105 group-hover:border-accent/50">
+                <div
+                  className="relative bg-card rounded-lg border border-border overflow-hidden transition-all duration-300 group-hover:scale-105 group-hover:border-accent/50"
+                  style={{ aspectRatio: isPortrait(c) ? "1/1.414" : "1.414/1" }}
+                >
 
-                  {/* ── PDF preview or letter fallback ── */}
-                  {pdfUrl ? (
-                    <iframe
-                      src={`${pdfUrl}#toolbar=0&view=FitH`}
-                      title={c.name}
-                      style={{ width: "100%", height: "100%", border: "none", pointerEvents: "none", display: "block" }}
+                  {/* ── JPG preview or letter fallback ── */}
+                  {imgUrl ? (
+                    <img
+                      src={imgUrl}
+                      alt={c.name}
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
                   ) : (
                     <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
@@ -70,13 +79,13 @@ const CertificationsSection = () => {
             <p className="font-body text-muted-foreground mb-1">{selected.issuer}</p>
             <p className="font-body text-xs text-muted-foreground mb-6">Credential ID: {selected.credentialId}</p>
 
-            {/* PDF Display */}
+            {/* Certificate image */}
             {"pdfUrl" in selected && selected.pdfUrl && (
               <div className="mb-8 rounded-lg overflow-hidden border border-border bg-card">
-                <iframe
-                  src={selected.pdfUrl}
-                  className="w-full h-96"
-                  title={selected.name}
+                <img
+                  src={selected.pdfUrl.replace("/certificates/", "/certificates/images/").replace(".pdf", ".jpg")}
+                  alt={selected.name}
+                  className="w-full h-auto"
                 />
               </div>
             )}
