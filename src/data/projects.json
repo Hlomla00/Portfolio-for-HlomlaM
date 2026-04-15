@@ -83,5 +83,33 @@
       { "label": "Revenue Model", "value": "Fintech" },
       { "label": "Type", "value": "Personal" }
     ]
+  },
+  {
+    "id": "flowpay",
+    "title": "FlowPay",
+    "category": "Web",
+    "featured": true,
+    "description": "Details coming soon.",
+    "techStack": ["TypeScript"],
+    "githubUrl": "https://github.com/Hlomla00/FlowPay",
+    "liveUrl": "https://flowpay-ai-verifier.vercel.app",
+    "images": [],
+    "metrics": [
+      { "label": "Type", "value": "Personal" }
+    ]
+  },
+  {
+    "id": "pulse",
+    "title": "Pulse — Know Who's Around",
+    "category": "Web",
+    "featured": true,
+    "description": "Details coming soon.",
+    "techStack": ["TypeScript"],
+    "githubUrl": "https://github.com/Hlomla00/pulse-know-who-s-around",
+    "liveUrl": "",
+    "images": [],
+    "metrics": [
+      { "label": "Type", "value": "Personal" }
+    ]
   }
 ]
