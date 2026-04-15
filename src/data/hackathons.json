@@ -8,6 +8,7 @@
       "project": "SafeRide",
       "description": "Competed in the Telkom 10X Hackathon 2025, one of South Africa's most prestigious tech competitions. Presented SafeRide — a ride-hailing kiosk and web app that helps people request rides safely without a smartphone, mobile data, or cash. Awarded 2nd place for innovation, technical execution, and social impact.",
       "image": "",
+      "images": [],
       "tags": ["Fintech", "Social Impact", "Full Stack", "Innovation"]
     },
     {
@@ -18,6 +19,29 @@
       "project": "QueUp",
       "description": "Entered the MICT SETA Western Cape Regional competition with QueUp — a smart queue management platform eliminating physical waiting lines at government institutions across Cape Town. Awarded 2nd place in the Western Cape region for addressing a critical service delivery problem faced by millions of South Africans.",
       "image": "",
+      "images": [
+        "/hackathons/mict/mict-01.jpg",
+        "/hackathons/mict/mict-02.jpg",
+        "/hackathons/mict/mict-03.jpg",
+        "/hackathons/mict/mict-04.jpg",
+        "/hackathons/mict/mict-05.jpg",
+        "/hackathons/mict/mict-06.jpg",
+        "/hackathons/mict/mict-07.jpg",
+        "/hackathons/mict/mict-08.jpg",
+        "/hackathons/mict/mict-09.jpg",
+        "/hackathons/mict/mict-10.jpg",
+        "/hackathons/mict/mict-11.jpg",
+        "/hackathons/mict/mict-12.jpg",
+        "/hackathons/mict/mict-13.jpg",
+        "/hackathons/mict/mict-14.jpg",
+        "/hackathons/mict/mict-15.jpg",
+        "/hackathons/mict/mict-16.jpg",
+        "/hackathons/mict/mict-17.jpg",
+        "/hackathons/mict/mict-18.jpg",
+        "/hackathons/mict/mict-19.jpg",
+        "/hackathons/mict/mict-20.jpg",
+        "/hackathons/mict/mict-21.jpg"
+      ],
       "tags": ["GovTech", "Smart Systems", "Social Impact", "UX"]
     }
   ]

@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-import { useInView } from "../hooks/useInView";
 import SwipePanel from "./SwipePanel";
 import { Github, ExternalLink, ChevronLeft, ChevronRight, Eye } from "lucide-react";
 import projects from "../data/projects.json";
@@ -10,7 +9,6 @@ const categories = ["All", "Web", "Mobile", "AI/ML", "Open Source"];
 const ProjectsSection = () => {
   const [filter, setFilter] = useState("All");
   const [selected, setSelected] = useState<Project | null>(null);
-  const { ref, inView } = useInView();
 
   const filtered = filter === "All" ? projects : projects.filter((p) => p.category === filter);
   const grouped = filter === "All"
@@ -18,8 +16,8 @@ const ProjectsSection = () => {
     : [{ cat: filter, items: filtered }];
 
   return (
-    <section id="projects" className="min-h-screen py-24 px-6 md:px-12 bg-background" ref={ref}>
-      <div className={`max-w-7xl mx-auto transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+    <section id="projects" className="min-h-screen py-24 px-6 md:px-12 bg-background">
+      <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
           <h2 className="font-display text-4xl md:text-6xl text-foreground">
             MY WORK
@@ -122,14 +120,28 @@ const ProjectCard = ({ project, onClick }: { project: Project; onClick: () => vo
     className="flex-shrink-0 w-72 md:w-80 snap-start cursor-pointer group"
   >
     <div className="relative aspect-video bg-secondary rounded-lg overflow-hidden transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_30px_hsl(357_91%_47%/0.3)]">
-      <div className="absolute inset-0 flex items-center justify-center">
-        <span className="font-display text-3xl text-muted-foreground/30">{project.title.charAt(0)}</span>
+      {/* Faint letter — background texture */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <span className="font-display text-8xl text-muted-foreground/10">{project.title.charAt(0)}</span>
       </div>
+
       {project.featured && (
-        <span className="absolute top-2 left-2 px-2 py-0.5 bg-accent text-accent-foreground text-[10px] font-body tracking-wider uppercase rounded">Featured</span>
+        <span className="absolute top-2 left-2 px-2 py-0.5 bg-accent text-accent-foreground text-[10px] font-body tracking-wider uppercase rounded z-10">Featured</span>
       )}
-      {/* Hover overlay */}
-      <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+
+      {/* Resting state — always visible, fades out on hover */}
+      <div className="absolute inset-0 flex flex-col justify-end p-4 z-10 transition-opacity duration-300 group-hover:opacity-0">
+        <span className="px-2 py-0.5 bg-background/50 text-muted-foreground text-[9px] font-body tracking-widest uppercase rounded w-fit mb-2">{project.category}</span>
+        <h4 className="font-display text-lg text-foreground leading-tight">{project.title}</h4>
+        <div className="flex gap-1 mt-2 flex-wrap">
+          {project.techStack.slice(0, 3).map((t) => (
+            <span key={t} className="text-[10px] px-2 py-0.5 bg-background/60 text-muted-foreground rounded-full font-body">{t}</span>
+          ))}
+        </div>
+      </div>
+
+      {/* Hover overlay — unchanged */}
+      <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 z-20">
         <h4 className="font-display text-xl text-foreground">{project.title}</h4>
         <div className="flex gap-1 mt-2 flex-wrap">
           {project.techStack.slice(0, 3).map((t) => (
