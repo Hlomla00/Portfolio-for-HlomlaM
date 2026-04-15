@@ -49,5 +49,39 @@
       { "label": "Features", "value": "4 core" }
     ],
     "featured": true
+  },
+  {
+    "id": "queup",
+    "title": "QueUp — Smart Queue Management",
+    "category": "Web",
+    "featured": true,
+    "description": "A smart queue management platform that lets South Africans join government queues remotely — Home Affairs, SASSA, SARS, hospitals, courts, and municipalities. No more wasted hours standing in line. Users join from anywhere and get notified when it's their turn. Live across Cape Town with 450+ active branches.",
+    "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    "githubUrl": "https://github.com/Hlomla00",
+    "liveUrl": "https://que-up1.vercel.app/",
+    "images": [],
+    "metrics": [
+      { "label": "Hours Saved", "value": "1.2M+" },
+      { "label": "Active Branches", "value": "450" },
+      { "label": "User Rating", "value": "4.9/5" },
+      { "label": "Type", "value": "Personal" }
+    ]
+  },
+  {
+    "id": "voucherbridge",
+    "title": "VoucherBridge — Multi-Bank Voucher Wallet",
+    "category": "Web",
+    "featured": true,
+    "description": "A South African fintech platform that lets users redeem cash vouchers from multiple banks — FNB, ABSA, Standard Bank, Capitec, Nedbank — into a single unified digital wallet. Supports instant PayShap-style transfers, bank deposits, and voucher conversion. Built for the unbanked and underbanked who rely on voucher-based money transfers.",
+    "techStack": ["React", "TypeScript", "Vite", "Tailwind CSS", "Zustand"],
+    "githubUrl": "https://github.com/Hlomla00",
+    "liveUrl": "",
+    "images": [],
+    "metrics": [
+      { "label": "Banks Supported", "value": "5" },
+      { "label": "Target Users", "value": "Unbanked SA" },
+      { "label": "Revenue Model", "value": "Fintech" },
+      { "label": "Type", "value": "Personal" }
+    ]
   }
 ]
