@@ -123,10 +123,18 @@ const ProjectCard = ({ project, onClick }: { project: Project; onClick: () => vo
     className="flex-shrink-0 w-72 md:w-80 snap-start cursor-pointer group"
   >
     <div className="relative aspect-video bg-secondary rounded-lg overflow-hidden transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_30px_hsl(357_91%_47%/0.3)]">
-      {/* Faint letter — background texture */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <span className="font-display text-8xl text-muted-foreground/10">{project.title.charAt(0)}</span>
-      </div>
+      {/* Thumbnail or faint letter fallback */}
+      {project.thumbnail ? (
+        <img
+          src={project.thumbnail}
+          alt={project.title}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      ) : (
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <span className="font-display text-8xl text-muted-foreground/10">{project.title.charAt(0)}</span>
+        </div>
+      )}
 
       {project.featured && (
         <span className="absolute top-2 left-2 px-2 py-0.5 bg-accent text-accent-foreground text-[10px] font-body tracking-wider uppercase rounded z-10">Featured</span>
