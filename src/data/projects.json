@@ -102,6 +102,7 @@
     "techStack": ["TypeScript"],
     "previewUrl": "",
     "liveUrl": "https://flowpay-ai-verifier.vercel.app",
+    "thumbnail": "/projects/flowpay.jpg",
     "githubUrl": "https://github.com/Hlomla00/FlowPay",
     "images": [],
     "metrics": [
