@@ -6,6 +6,7 @@
     "description": "A ride-hailing kiosk and lightweight web app designed for people without smartphones, mobile data, or cash. Built as part of an agile team, I handled the full stack: front-end kiosk screens, back-end services for logins, payments, ride bookings and live trip tracking, and database integration. Focused on safety, usability, and reliability for underserved communities.",
     "techStack": ["Java 21", "HTML", "CSS", "JavaScript", "MySQL", "REST API"],
     "previewUrl": "https://saferide-system.vercel.app/",
+    "liveUrl": "",
     "githubUrl": "https://github.com/Hlomla00",
     "images": [],
     "metrics": [
@@ -22,7 +23,8 @@
     "category": "Web",
     "description": "An online clinic appointment system built to streamline healthcare access for CPUT students. I contributed to front-end booking interfaces, developed server-side appointment logic, and designed relational databases to securely store patient and booking data. Also handled testing, debugging, and deployment in collaboration with the team.",
     "techStack": ["Java", "HTML", "CSS", "JavaScript", "MySQL", "NetBeans"],
-    "previewUrl": "https://clinicbookingsystem.netlify.app/",
+    "previewUrl": "",
+    "liveUrl": "",
     "githubUrl": "https://github.com/Hlomla00",
     "images": [],
     "metrics": [
@@ -39,6 +41,7 @@
     "category": "Mobile",
     "description": "A mobile student marketplace app for CPUT students to buy, sell, and connect on campus. Built user authentication, listings, messaging, and transaction features. Worked across front-end, back-end, and database layers. Participated in requirements analysis, API integration, and iterative testing to ensure scalability and usability.",
     "techStack": ["Java", "Android", "MySQL", "REST API", "IntelliJ IDEA"],
+    "previewUrl": "",
     "liveUrl": "",
     "githubUrl": "https://github.com/Hlomla00",
     "images": [],
@@ -57,8 +60,9 @@
     "featured": true,
     "description": "A smart queue management platform that lets South Africans join government queues remotely — Home Affairs, SASSA, SARS, hospitals, courts, and municipalities. No more wasted hours standing in line. Users join from anywhere and get notified when it's their turn. Live across Cape Town with 450+ active branches.",
     "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    "previewUrl": "",
+    "liveUrl": "https://que-up1.vercel.app",
     "githubUrl": "https://github.com/Hlomla00",
-    "liveUrl": "https://que-up1.vercel.app/",
     "images": [],
     "metrics": [
       { "label": "Hours Saved", "value": "1.2M+" },
@@ -74,8 +78,9 @@
     "featured": true,
     "description": "A South African fintech platform that lets users redeem cash vouchers from multiple banks — FNB, ABSA, Standard Bank, Capitec, Nedbank — into a single unified digital wallet. Supports instant PayShap-style transfers, bank deposits, and voucher conversion. Built for the unbanked and underbanked who rely on voucher-based money transfers.",
     "techStack": ["React", "TypeScript", "Vite", "Tailwind CSS", "Zustand"],
+    "previewUrl": "",
+    "liveUrl": "https://voucher-bay.vercel.app",
     "githubUrl": "https://github.com/Hlomla00",
-    "liveUrl": "",
     "images": [],
     "metrics": [
       { "label": "Banks Supported", "value": "5" },
@@ -91,8 +96,9 @@
     "featured": true,
     "description": "Details coming soon.",
     "techStack": ["TypeScript"],
-    "githubUrl": "https://github.com/Hlomla00/FlowPay",
+    "previewUrl": "",
     "liveUrl": "https://flowpay-ai-verifier.vercel.app",
+    "githubUrl": "https://github.com/Hlomla00/FlowPay",
     "images": [],
     "metrics": [
       { "label": "Type", "value": "Personal" }
@@ -105,8 +111,24 @@
     "featured": true,
     "description": "Details coming soon.",
     "techStack": ["TypeScript"],
+    "previewUrl": "",
+    "liveUrl": "https://pulse-beryl-pi.vercel.app",
     "githubUrl": "https://github.com/Hlomla00/pulse-know-who-s-around",
-    "liveUrl": "",
+    "images": [],
+    "metrics": [
+      { "label": "Type", "value": "Personal" }
+    ]
+  },
+  {
+    "id": "bookmzi",
+    "title": "BookMzi — Your Story Stream",
+    "category": "Web",
+    "featured": true,
+    "description": "Details coming soon.",
+    "techStack": ["TypeScript"],
+    "previewUrl": "",
+    "liveUrl": "https://bookmzi-your-story-stream.vercel.app",
+    "githubUrl": "https://github.com/Hlomla00",
     "images": [],
     "metrics": [
       { "label": "Type", "value": "Personal" }

@@ -50,16 +50,18 @@ const ProjectsSection = () => {
 
       {/* Detail panel */}
       <SwipePanel open={!!selected} onClose={() => setSelected(null)}>
-        {selected && (
+        {selected && (() => {
+          const previewSrc = selected.liveUrl || selected.previewUrl;
+          return (
           <div>
             <h2 className="font-display text-5xl md:text-7xl text-foreground mb-4">{selected.title}</h2>
             <p className="font-body text-muted-foreground leading-relaxed mb-6">{selected.description}</p>
-            
+
             {/* Project Preview */}
-            {selected.previewUrl && (
+            {previewSrc && (
               <div className="mb-8 rounded-lg overflow-hidden border border-border bg-card">
-                <iframe 
-                  src={selected.previewUrl} 
+                <iframe
+                  src={previewSrc}
                   className="w-full h-96"
                   title={selected.title}
                   sandbox="allow-scripts allow-same-origin allow-forms"
@@ -86,14 +88,15 @@ const ProjectsSection = () => {
                   <Github size={16} /> GitHub
                 </a>
               )}
-              {selected.previewUrl && (
-                <a href={selected.previewUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-body text-sm rounded hover:brightness-110 transition-all">
+              {previewSrc && (
+                <a href={previewSrc} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-body text-sm rounded hover:brightness-110 transition-all">
                   <Eye size={16} /> Preview
                 </a>
               )}
             </div>
           </div>
-        )}
+          );
+        })()}
       </SwipePanel>
     </section>
   );
