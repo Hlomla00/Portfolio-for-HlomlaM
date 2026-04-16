@@ -8,13 +8,13 @@
       "project": "SafeRide",
       "description": "Competed in the Telkom 10X Hackathon 2025, one of South Africa's most prestigious tech competitions. Presented SafeRide — a ride-hailing kiosk and web app that helps people request rides safely without a smartphone, mobile data, or cash. Awarded 2nd place for innovation, technical execution, and social impact.",
       "image": "",
-      "images": [],
+      "images": ["/hackathons/telkom/telkom-01.jpg", "/hackathons/telkom/telkom-02.jpg", "/hackathons/telkom/telkom-03.jpg", "/hackathons/telkom/telkom-04.jpg", "/hackathons/telkom/telkom-05.jpg", "/hackathons/telkom/telkom-06.jpg", "/hackathons/telkom/telkom-07.jpg", "/hackathons/telkom/telkom-08.jpg", "/hackathons/telkom/telkom-09.jpg", "/hackathons/telkom/telkom-10.jpg", "/hackathons/telkom/telkom-11.jpg", "/hackathons/telkom/telkom-12.jpg", "/hackathons/telkom/telkom-13.jpg", "/hackathons/telkom/telkom-14.jpg"],
       "tags": ["Fintech", "Social Impact", "Full Stack", "Innovation"]
     },
     {
-      "id": "mict-seta-2025",
+      "id": "mict-seta-2026",
       "competition": "MICT SETA Western Cape Region",
-      "year": "2025",
+      "year": "2026",
       "position": "2nd Place",
       "project": "QueUp",
       "description": "Entered the MICT SETA Western Cape Regional competition with QueUp — a smart queue management platform eliminating physical waiting lines at government institutions across Cape Town. Awarded 2nd place in the Western Cape region for addressing a critical service delivery problem faced by millions of South Africans.",
