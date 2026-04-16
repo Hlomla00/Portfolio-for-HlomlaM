@@ -73,10 +73,10 @@
   },
   {
     "id": "voucherbridge",
-    "title": "VoucherBridge — Multi-Bank Voucher Wallet",
+    "title": "VoucherBridge — Multi-Bank Cash Voucher Wallet",
     "category": "Web",
     "featured": true,
-    "description": "A South African fintech platform that lets users redeem cash vouchers from multiple banks — FNB, ABSA, Standard Bank, Capitec, Nedbank — into a single unified digital wallet. Supports instant PayShap-style transfers, bank deposits, and voucher conversion. Built for the unbanked and underbanked who rely on voucher-based money transfers.",
+    "description": "South African banks — FNB, ABSA, Standard Bank, Capitec, Nedbank — each issue cash vouchers that can only be redeemed within their own ecosystem, cannot be combined, and require physical ATM visits to cash out. Millions of rands in vouchers go underutilized every year, leaving unbanked and underbanked South Africans without a simple way to access their funds digitally. VoucherBridge solves this by letting users redeem vouchers from any bank into a single unified digital wallet, aggregate balances across banks, make instant PayShap-style transfers using a Pay ID, deposit funds directly to any South African bank account, and convert vouchers from one bank into credit usable at another. Freemium model targeting the millions of South Africans who rely on voucher-based money transfers daily.",
     "techStack": ["React", "TypeScript", "Vite", "Tailwind CSS", "Zustand"],
     "previewUrl": "",
     "liveUrl": "https://voucher-bay.vercel.app",
@@ -84,9 +84,9 @@
     "images": [],
     "metrics": [
       { "label": "Banks Supported", "value": "5" },
-      { "label": "Target Users", "value": "Unbanked SA" },
-      { "label": "Revenue Model", "value": "Fintech" },
-      { "label": "Type", "value": "Personal" }
+      { "label": "Transfer Method", "value": "PayShap" },
+      { "label": "Model", "value": "Freemium" },
+      { "label": "Target", "value": "Unbanked SA" }
     ]
   },
   {
@@ -106,31 +106,37 @@
   },
   {
     "id": "pulse",
-    "title": "Pulse — Know Who's Around",
+    "title": "Pulse — Friend Location & Activity Tracker",
     "category": "Web",
     "featured": true,
-    "description": "Details coming soon.",
-    "techStack": ["TypeScript"],
+    "description": "A mobile-first React web app for South African university students, launching at CPUT in Cape Town. Combines real-time friend location tracking with activity status detection — think Life360 meets Uber's design language. Features a full Leaflet map with CartoDB Dark Matter tiles centered on the CPUT campus, friend pins as circular avatars with color-coded borders (green for active, amber for recently active, grey for inactive), and a draggable bottom sheet with scrollable friend cards. The killer feature — Pulse Check — is a full friend list sorted by real-time activity with glowing animations for active users. Includes a freemium model with Ghost Mode, exact last seen times, and location history locked behind Pulse Premium at R49/month or R399/year. Privacy-first with full user control over who sees their location.",
+    "techStack": ["React 18", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "React Router", "Leaflet"],
     "previewUrl": "",
     "liveUrl": "https://pulse-beryl-pi.vercel.app",
     "githubUrl": "https://github.com/Hlomla00/pulse-know-who-s-around",
     "images": [],
     "metrics": [
+      { "label": "Launch", "value": "CPUT" },
+      { "label": "Premium", "value": "R49/mo" },
+      { "label": "Model", "value": "Freemium" },
       { "label": "Type", "value": "Personal" }
     ]
   },
   {
     "id": "bookmzi",
-    "title": "BookMzi — Your Story Stream",
+    "title": "BookMzi — South African Digital Book Platform",
     "category": "Web",
     "featured": true,
-    "description": "Details coming soon.",
-    "techStack": ["TypeScript"],
+    "description": "A South African digital book platform combining three models into one. Netflix-style subscription streaming at Basic (R99/mo) or Premium (R199/mo) gives readers unlimited access to eBooks, PDFs, and audiobooks, with an optional audiobook add-on at R50/mo. A Takealot-style marketplace lets books be purchased individually, with authors earning 70–80% royalties on direct sales, plus student bundles and print-on-demand. Most importantly, BookMzi is a self-publishing platform for underrepresented South African authors — underprivileged and emerging writers can upload, publish, and monetize their work, track reads, sales, and revenue through dedicated dashboards, and access optional paid services like editing, cover design, and featured placement. Democratizing book access for South African readers while empowering local authors to reach an audience and earn a living from their writing.",
+    "techStack": ["React", "TypeScript", "Tailwind CSS", "Vercel"],
     "previewUrl": "",
     "liveUrl": "https://bookmzi-your-story-stream.vercel.app",
     "githubUrl": "https://github.com/Hlomla00",
     "images": [],
     "metrics": [
+      { "label": "Models", "value": "3-in-1" },
+      { "label": "Royalties", "value": "70–80%" },
+      { "label": "Basic Plan", "value": "R99/mo" },
       { "label": "Type", "value": "Personal" }
     ]
   }
