@@ -24,7 +24,7 @@
     "description": "An online clinic appointment system built to streamline healthcare access for CPUT students. I contributed to front-end booking interfaces, developed server-side appointment logic, and designed relational databases to securely store patient and booking data. Also handled testing, debugging, and deployment in collaboration with the team.",
     "techStack": ["Java", "HTML", "CSS", "JavaScript", "MySQL", "NetBeans"],
     "previewUrl": "",
-    "liveUrl": "",
+    "liveUrl": "https://clinicbookingsystem.netlify.app/",
     "githubUrl": "https://github.com/Hlomla00",
     "images": [],
     "metrics": [
