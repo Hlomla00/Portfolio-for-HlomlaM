@@ -146,5 +146,24 @@
       { "label": "Basic Plan", "value": "R99/mo" },
       { "label": "Type", "value": "Personal" }
     ]
+  },
+  {
+    "id": "gum-ai",
+    "title": "GUM AI — Student Copilot",
+    "category": ["Personal"],
+    "featured": true,
+    "description": "A prepaid token-based AI assistant built specifically for CPUT and South African university students. Think GitHub Copilot meets ChatGPT meets prepaid airtime — affordable and designed for student life. R10 buys 1 day of AI access, R50 buys a full week. Smart model routing automatically picks the best AI for each task: GPT-5-mini for coding and math, Gemini 2.5 Pro for writing and essays, Gemini Flash for quick questions. No subscriptions, no credit cards, no foreign currency — just prepaid AI like buying airtime at the spaza shop.",
+    "techStack": ["React", "TypeScript", "Supabase", "Framer Motion", "Tailwind CSS", "OpenAI", "Gemini"],
+    "githubUrl": "https://github.com/Hlomla00",
+    "liveUrl": "https://gum-ai-copilot.vercel.app",
+    "previewUrl": "",
+    "thumbnail": "/projects/gum-ai.jpg",
+    "images": [],
+    "metrics": [
+      { "label": "Day Pass", "value": "R10" },
+      { "label": "Week Pass", "value": "R50" },
+      { "label": "AI Models", "value": "3" },
+      { "label": "Type", "value": "Personal" }
+    ]
   }
 ]
