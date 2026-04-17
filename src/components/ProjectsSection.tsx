@@ -120,12 +120,31 @@ const ScrollRow = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-const ProjectCard = ({ project, onClick }: { project: Project; onClick: () => void }) => (
+const ProjectCard = ({ project, onClick }: { project: Project; onClick: () => void }) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const onMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const el = cardRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    el.style.transform = `perspective(700px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) scale(1.02)`;
+  };
+  const onMouseLeave = () => {
+    if (cardRef.current) cardRef.current.style.transform = "";
+  };
+
+  return (
   <div
+    ref={cardRef}
     onClick={onClick}
+    onMouseMove={onMouseMove}
+    onMouseLeave={onMouseLeave}
     className="flex-shrink-0 w-72 md:w-80 snap-start cursor-pointer group"
+    style={{ transition: "transform 0.15s ease, box-shadow 0.15s ease" }}
   >
-    <div className="relative aspect-video bg-secondary rounded-lg overflow-hidden transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_30px_hsl(357_91%_47%/0.3)]">
+    <div className="relative aspect-video bg-secondary rounded-lg overflow-hidden transition-all duration-300 group-hover:shadow-[0_0_30px_hsl(357_91%_47%/0.3)]">
       {/* Thumbnail or faint letter fallback */}
       {project.thumbnail ? (
         <img
@@ -165,6 +184,7 @@ const ProjectCard = ({ project, onClick }: { project: Project; onClick: () => vo
       </div>
     </div>
   </div>
-);
+  );
+};
 
 export default ProjectsSection;

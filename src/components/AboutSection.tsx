@@ -1,13 +1,45 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useInView } from "../hooks/useInView";
 import profile from "../data/profile.json";
 import { Github, Linkedin, Mail } from "lucide-react";
+
+const useGithubStats = () => {
+  const [stats, setStats] = useState<{ repos: number; stars: number; followers: number } | null>(null);
+  useEffect(() => {
+    Promise.all([
+      fetch("https://api.github.com/users/Hlomla00").then((r) => r.json()),
+      fetch("https://api.github.com/users/Hlomla00/repos?per_page=100").then((r) => r.json()),
+    ]).then(([user, repos]) => {
+      const stars = Array.isArray(repos) ? repos.reduce((s: number, r: { stargazers_count: number }) => s + r.stargazers_count, 0) : 0;
+      setStats({ repos: user.public_repos ?? 0, stars, followers: user.followers ?? 0 });
+    }).catch(() => {});
+  }, []);
+  return stats;
+};
+
+const AnimatedCount = ({ target, inView }: { target: number; inView: boolean }) => {
+  const [count, setCount] = useState(0);
+  const fired = useRef(false);
+  useEffect(() => {
+    if (!inView || fired.current || target === 0) return;
+    fired.current = true;
+    const step = Math.max(1, Math.ceil(target / 40));
+    let val = 0;
+    const id = setInterval(() => {
+      val += step;
+      if (val >= target) { setCount(target); clearInterval(id); }
+      else setCount(val);
+    }, 30);
+  }, [inView, target]);
+  return <>{count}</>;
+};
 
 const skillTags = ["HTML", "React", "Node.js", "Python", "TypeScript", "Docker", "AWS", "GraphQL"];
 
 const AboutSection = () => {
   const [mode, setMode] = useState<"director" | "snapshot">("director");
   const { ref, inView } = useInView();
+  const githubStats = useGithubStats();
 
   return (
     <section id="about" className="min-h-screen py-24 px-6 md:px-12 bg-background" ref={ref}>
@@ -54,7 +86,23 @@ const AboutSection = () => {
                   <div className="drop-cap font-body text-muted-foreground leading-relaxed text-base">
                     {profile.aboutBio}
                   </div>
-                  <div className="flex flex-wrap gap-3 mt-8">
+                  {githubStats && (
+                    <div className="flex gap-6 mt-8">
+                      {[
+                        { label: "Repos", value: githubStats.repos },
+                        { label: "Stars", value: githubStats.stars },
+                        { label: "Followers", value: githubStats.followers },
+                      ].map(({ label, value }) => (
+                        <div key={label} className="text-center">
+                          <p className="font-display text-2xl text-accent">
+                            <AnimatedCount target={value} inView={inView} />
+                          </p>
+                          <p className="font-body text-[10px] text-muted-foreground tracking-widest uppercase mt-0.5">{label}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  <div className="flex flex-wrap gap-3 mt-6">
                     {profile.traits.map((t) => (
                       <span key={t} className="px-4 py-1.5 bg-secondary text-muted-foreground font-body text-xs rounded-full tracking-wide">
                         {t}

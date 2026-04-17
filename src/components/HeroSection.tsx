@@ -3,6 +3,37 @@ import { ChevronDown } from "lucide-react";
 import ParticleCanvas from "./ParticleCanvas";
 import profile from "../data/profile.json";
 
+const Typewriter = ({ words }: { words: string[] }) => {
+  const [display, setDisplay] = useState("");
+  const [wordIndex, setWordIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+
+  useEffect(() => {
+    const word = words[wordIndex];
+    let timeout: ReturnType<typeof setTimeout>;
+
+    if (!deleting && display.length < word.length) {
+      timeout = setTimeout(() => setDisplay(word.slice(0, display.length + 1)), 80);
+    } else if (!deleting && display.length === word.length) {
+      timeout = setTimeout(() => setDeleting(true), 1600);
+    } else if (deleting && display.length > 0) {
+      timeout = setTimeout(() => setDisplay(display.slice(0, -1)), 45);
+    } else if (deleting && display.length === 0) {
+      setDeleting(false);
+      setWordIndex((i) => (i + 1) % words.length);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [display, deleting, wordIndex, words]);
+
+  return (
+    <span>
+      {display}
+      <span className="inline-block w-[2px] h-[1em] bg-accent align-middle ml-0.5 animate-blink" />
+    </span>
+  );
+};
+
 const HeroSection = () => {
   const [show, setShow] = useState(false);
   useEffect(() => { setTimeout(() => setShow(true), 200); }, []);
@@ -28,11 +59,11 @@ const HeroSection = () => {
           {profile.name}
         </h1>
 
-        {/* Subtitle */}
+        {/* Typewriter subtitle */}
         <p
           className={`font-body text-muted-foreground text-lg md:text-xl tracking-[0.2em] mt-4 transition-all duration-700 delay-[400ms] ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          {profile.subtitles.join(" · ")}
+          <Typewriter words={profile.subtitles} />
         </p>
 
         {/* Bio */}

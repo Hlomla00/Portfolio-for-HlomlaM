@@ -13,6 +13,8 @@ import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import BackToTop from "../components/BackToTop";
 import EasterEgg from "../components/EasterEgg";
+import ScrollProgressBar from "../components/ScrollProgressBar";
+import CursorTrail from "../components/CursorTrail";
 
 const Index = () => {
   const [loaded, setLoaded] = useState(false);
@@ -25,6 +27,8 @@ const Index = () => {
 
   return (
     <>
+      <ScrollProgressBar />
+      <CursorTrail />
       {!loaded && <LoadingScreen onComplete={onComplete} />}
       <EasterEgg />
       <Navbar />
