@@ -95,17 +95,20 @@
   },
   {
     "id": "flowpay",
-    "title": "FlowPay",
+    "title": "FlowPay — AI Payment Verification Protocol",
     "category": ["Personal"],
     "featured": true,
-    "description": "Details coming soon.",
-    "techStack": ["TypeScript"],
+    "description": "An AI-powered payment verification protocol solving one of South Africa's most damaging problems: fake proof-of-payment screenshots. Users upload a payment receipt or screenshot — FlowPay's AI Detector Agent performs a forensic scan checking pixels, fonts, metadata and visual consistency to detect tampering. The Oracle Agent validates transaction IDs and timestamps against real banking data. Results are permanently recorded on the Qubic blockchain as an immutable Proof-of-Truth. Users receive a colour-coded FlowPay Verification Token: green for authentic, yellow for suspicious, red for fraudulent. Built for spaza shops, government departments, SARS, Home Affairs, municipalities, NSFAS, and any South African who needs to verify a payment instantly without calling a bank.",
+    "techStack": ["React", "TypeScript", "Supabase", "Qubic Blockchain", "AI Agents", "Framer Motion", "Tailwind CSS"],
     "previewUrl": "",
     "liveUrl": "https://flowpay-ai-verifier.vercel.app",
     "thumbnail": "/projects/flowpay.jpg",
     "githubUrl": "https://github.com/Hlomla00/FlowPay",
     "images": [],
     "metrics": [
+      { "label": "Verdict", "value": "Green/Yellow/Red" },
+      { "label": "Chain", "value": "Qubic" },
+      { "label": "Target", "value": "SA Market" },
       { "label": "Type", "value": "Personal" }
     ]
   },
