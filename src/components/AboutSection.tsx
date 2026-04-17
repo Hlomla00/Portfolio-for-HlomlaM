@@ -3,15 +3,34 @@ import { useInView } from "../hooks/useInView";
 import profile from "../data/profile.json";
 import { Github, Linkedin, Mail } from "lucide-react";
 
+const fetchAllRepos = async (): Promise<{ stargazers_count: number }[]> => {
+  const all: { stargazers_count: number }[] = [];
+  let url: string | null = "https://api.github.com/users/Hlomla00/repos?per_page=100&page=1";
+  while (url) {
+    const res = await fetch(url);
+    const page = await res.json();
+    if (!Array.isArray(page)) break;
+    all.push(...page);
+    const link = res.headers.get("Link") ?? "";
+    const next = link.match(/<([^>]+)>;\s*rel="next"/);
+    url = next ? next[1] : null;
+  }
+  return all;
+};
+
 const useGithubStats = () => {
   const [stats, setStats] = useState<{ repos: number; stars: number; followers: number } | null>(null);
   useEffect(() => {
     Promise.all([
       fetch("https://api.github.com/users/Hlomla00").then((r) => r.json()),
-      fetch("https://api.github.com/users/Hlomla00/repos?per_page=100").then((r) => r.json()),
+      fetchAllRepos(),
     ]).then(([user, repos]) => {
-      const stars = Array.isArray(repos) ? repos.reduce((s: number, r: { stargazers_count: number }) => s + r.stargazers_count, 0) : 0;
-      setStats({ repos: user.public_repos ?? 0, stars, followers: user.followers ?? 0 });
+      const stars = repos.reduce((s, r) => s + (r.stargazers_count ?? 0), 0);
+      setStats({
+        repos: user.public_repos ?? 0,
+        stars,
+        followers: user.followers ?? 0,
+      });
     }).catch(() => {});
   }, []);
   return stats;
