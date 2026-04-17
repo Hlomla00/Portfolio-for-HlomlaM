@@ -4,15 +4,18 @@ import { Github, ExternalLink, ChevronLeft, ChevronRight, Eye } from "lucide-rea
 import projects from "../data/projects.json";
 
 type Project = typeof projects[0];
-const categories = ["All", "Web", "Mobile", "AI/ML", "Open Source"];
+const categories = ["All", "Web", "Mobile", "Personal", "Academic"];
 
 const ProjectsSection = () => {
   const [filter, setFilter] = useState("All");
   const [selected, setSelected] = useState<Project | null>(null);
 
-  const filtered = filter === "All" ? projects : projects.filter((p) => p.category === filter);
+  const inCategory = (p: Project, cat: string) =>
+    Array.isArray(p.category) ? p.category.includes(cat) : p.category === cat;
+
+  const filtered = filter === "All" ? projects : projects.filter((p) => inCategory(p, filter));
   const grouped = filter === "All"
-    ? categories.slice(1).map((c) => ({ cat: c, items: projects.filter((p) => p.category === c) })).filter((g) => g.items.length)
+    ? categories.slice(1).map((c) => ({ cat: c, items: projects.filter((p) => inCategory(p, c)) })).filter((g) => g.items.length)
     : [{ cat: filter, items: filtered }];
 
   return (
@@ -142,7 +145,7 @@ const ProjectCard = ({ project, onClick }: { project: Project; onClick: () => vo
 
       {/* Resting state — always visible, fades out on hover */}
       <div className="absolute inset-0 flex flex-col justify-end p-4 z-10 transition-opacity duration-300 group-hover:opacity-0">
-        <span className="px-2 py-0.5 bg-background/50 text-muted-foreground text-[9px] font-body tracking-widest uppercase rounded w-fit mb-2">{project.category}</span>
+        <span className="px-2 py-0.5 bg-background/50 text-muted-foreground text-[9px] font-body tracking-widest uppercase rounded w-fit mb-2">{Array.isArray(project.category) ? project.category.join(" · ") : project.category}</span>
         <h4 className="font-display text-lg text-foreground leading-tight">{project.title}</h4>
         <div className="flex gap-1 mt-2 flex-wrap">
           {project.techStack.slice(0, 3).map((t) => (
