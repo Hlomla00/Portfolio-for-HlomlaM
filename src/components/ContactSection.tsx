@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useInView } from "../hooks/useInView";
-import { Github, Linkedin, Twitter, Mail, MessageCircle } from "lucide-react";
+import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 import profile from "../data/profile.json";
 
 const ContactSection = () => {
@@ -96,7 +96,6 @@ const ContactSection = () => {
           {[
             { icon: Github, href: profile.social.github },
             { icon: Linkedin, href: profile.social.linkedin },
-            { icon: Twitter, href: profile.social.twitter },
             { icon: Mail, href: `mailto:${profile.social.email}` },
           ].map(({ icon: Icon, href }, i) => (
             <a key={i} href={href} target="_blank" rel="noreferrer" className="p-3 rounded-full bg-secondary text-muted-foreground hover:bg-accent hover:text-accent-foreground hover:scale-110 transition-all">
