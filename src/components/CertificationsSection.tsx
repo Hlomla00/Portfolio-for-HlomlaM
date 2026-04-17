@@ -21,9 +21,8 @@ const CertificationsSection = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {certifications.map((c, i) => {
             const pdfUrl = (c as { pdfUrl?: string }).pdfUrl;
-            const imgUrl = pdfUrl
-              ? pdfUrl.replace("/certificates/", "/certificates/images/").replace(".pdf", ".jpg")
-              : null;
+            const imgUrl = (c as { imageUrl?: string }).imageUrl
+              ?? (pdfUrl ? pdfUrl.replace("/certificates/", "/certificates/images/").replace(".pdf", ".jpg") : null);
             return (
               <div
                 key={c.credentialId}
@@ -80,15 +79,17 @@ const CertificationsSection = () => {
             <p className="font-body text-xs text-muted-foreground mb-6">Credential ID: {selected.credentialId}</p>
 
             {/* Certificate image */}
-            {"pdfUrl" in selected && selected.pdfUrl && (
-              <div className="mb-8 rounded-lg overflow-hidden border border-border bg-card">
-                <img
-                  src={selected.pdfUrl.replace("/certificates/", "/certificates/images/").replace(".pdf", ".jpg")}
-                  alt={selected.name}
-                  className="w-full h-auto"
-                />
-              </div>
-            )}
+            {(() => {
+              const detailImg = (selected as { imageUrl?: string }).imageUrl
+                ?? ("pdfUrl" in selected && selected.pdfUrl
+                  ? selected.pdfUrl.replace("/certificates/", "/certificates/images/").replace(".pdf", ".jpg")
+                  : null);
+              return detailImg ? (
+                <div className="mb-8 rounded-lg overflow-hidden border border-border bg-card">
+                  <img src={detailImg} alt={selected.name} className="w-full h-auto" />
+                </div>
+              ) : null;
+            })()}
 
             {"note" in selected && selected.note && (
               <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6 text-left border-l-2 border-accent/40 pl-4">
