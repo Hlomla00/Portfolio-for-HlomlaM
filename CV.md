@@ -21,6 +21,14 @@ I'm Hlomla Moosa Magopeni, a 3rd-year Diploma in ICT Application Development stu
 
 ---
 
+## Entrepreneurial Background
+
+- **Mobile Car Wash (Dec 2023)** — identified a gap in a residential suburb, built and ran a mobile car wash business with a partner for 3 months using community WhatsApp marketing, zero budget, convenience model
+- This experience, combined with the CPUT Entrepreneurship Game assignment, formed the foundation of my approach to problem-solving: spot a gap, build a solution, ship it
+- *"It started with a bucket, a sponge, and a poster on a WhatsApp group. Now I build apps. The instinct was always the same. I just found better tools."*
+
+---
+
 ## Technical Skills
 
 ### Frontend
