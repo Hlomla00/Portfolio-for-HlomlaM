@@ -90,6 +90,12 @@ const CertificationsSection = () => {
               </div>
             )}
 
+            {"note" in selected && selected.note && (
+              <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6 text-left border-l-2 border-accent/40 pl-4">
+                {selected.note}
+              </p>
+            )}
+
             <div className="flex flex-wrap justify-center gap-2 mb-8">
               {selected.skills.map((s) => (
                 <span key={s} className="px-3 py-1 bg-secondary text-muted-foreground text-xs font-body rounded-full">{s}</span>
