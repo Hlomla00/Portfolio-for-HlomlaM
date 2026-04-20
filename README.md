@@ -116,21 +116,13 @@ I successfully produced a complete, professional CV and portfolio in Markdown th
 
 ## Mock Interview Video
 
-> **Coming soon** — Mock interview recording will be embedded here once completed.
+Mock interview for a Full-Stack Developer Work Integrated Learning (WIL) position — recorded as part of CPUT work readiness training for PRP370S.
 
-<!-- Once you have your YouTube/Google Drive link, replace the block below -->
-<!--
-<div align="center">
+<video src="https://github.com/Hlomla00/Portfolio-for-HlomlaM/raw/main/Mock%20Interview.mp4" controls width="100%">
+  <a href="https://github.com/Hlomla00/Portfolio-for-HlomlaM/raw/main/Mock%20Interview.mp4">▶ Watch Mock Interview Video</a>
+</video>
 
-[![Mock Interview](https://img.shields.io/badge/Watch-Mock%20Interview-red?style=for-the-badge&logo=youtube)](YOUR_VIDEO_LINK_HERE)
-
-</div>
-
-Or embed directly with HTML:
-<a href="YOUR_VIDEO_LINK_HERE">
-  <img src="https://img.shields.io/badge/▶%20Watch%20Mock%20Interview-Full%20Stack%20Developer%20WIL-red?style=for-the-badge" alt="Mock Interview Video"/>
-</a>
--->
+> If the player does not load, [click here to watch the video directly](https://github.com/Hlomla00/Portfolio-for-HlomlaM/raw/main/Mock%20Interview.mp4).
 
 ---
 
