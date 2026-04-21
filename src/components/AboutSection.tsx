@@ -94,7 +94,7 @@ const AboutSection = () => {
                 <div className="relative flex justify-center">
                   <div className="w-[26rem] h-[26rem] rounded-3xl bg-secondary border-2 border-accent overflow-hidden">
                     <img
-                      src="/WhatsApp Image 2026-03-25 at 16.17.25.jpeg"
+                      src="/peer-helper.jpeg"
                       alt="Profile"
                       className="w-full h-full object-cover"
                     />
@@ -137,7 +137,7 @@ const AboutSection = () => {
               <div className="max-w-md mx-auto text-center bg-card rounded-2xl p-10">
                 <div className="w-24 h-24 mx-auto rounded-full bg-secondary overflow-hidden mb-4">
                   <img
-                    src="/Hlodomlaada'.jpeg"
+                    src="/peer-helper.jpeg"
                     alt="Hlodomlada"
                     className="w-full h-full object-cover"
                   />
@@ -146,8 +146,8 @@ const AboutSection = () => {
                 <p className="font-body text-sm text-muted-foreground mt-1">{profile.title}</p>
                 <p className="font-body text-sm text-muted-foreground mt-4 leading-relaxed">{profile.bio}</p>
                 <div className="flex justify-center gap-4 mt-6">
-                  <a href={profile.social.github} className="p-3 rounded-full bg-secondary text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-all hover:scale-110"><Github size={18} /></a>
-                  <a href={profile.social.linkedin} className="p-3 rounded-full bg-secondary text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-all hover:scale-110"><Linkedin size={18} /></a>
+                  <a href={profile.social.github} target="_blank" rel="noreferrer" className="p-3 rounded-full bg-secondary text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-all hover:scale-110"><Github size={18} /></a>
+                  <a href={profile.social.linkedin} target="_blank" rel="noreferrer" className="p-3 rounded-full bg-secondary text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-all hover:scale-110"><Linkedin size={18} /></a>
                   <a href={`mailto:${profile.social.email}`} className="p-3 rounded-full bg-secondary text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-all hover:scale-110"><Mail size={18} /></a>
                 </div>
               </div>
