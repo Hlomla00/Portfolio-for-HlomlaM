@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://hlomla00.github.io/pixel-cinematic-code",
+  "homepage": "https://hlomla00.github.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
