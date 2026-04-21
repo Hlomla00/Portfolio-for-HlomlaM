@@ -96,7 +96,7 @@ const AboutSection = () => {
                     <img
                       src="/peer-helper.jpeg"
                       alt="Profile"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 </div>
@@ -139,7 +139,7 @@ const AboutSection = () => {
                   <img
                     src="/peer-helper.jpeg"
                     alt="Hlodomlada"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <h3 className="font-display text-2xl text-foreground">{profile.name}</h3>
